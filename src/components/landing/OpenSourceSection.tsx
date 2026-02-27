@@ -96,7 +96,7 @@ const OpenSourceSection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Star TempWallets on GitHub"
-                className="inline-flex items-center justify-center gap-2.5 px-8 py-4 bg-black text-white font-semibold text-sm rounded-xl hover:bg-neutral-800 hover:shadow-lg hover:scale-[1.02] transition-all duration-300">
+                className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-foreground text-background font-semibold text-base hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
 
                 <Star size={16} />
                 Star on GitHub
@@ -106,7 +106,7 @@ const OpenSourceSection = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="View TempWallets repository on GitHub"
-                className="inline-flex items-center justify-center gap-2.5 px-8 py-4 border border-black text-black font-semibold text-sm rounded-xl hover:bg-black hover:text-white transition-all duration-300">
+                className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full border-2 border-foreground/20 text-foreground font-semibold text-base hover:border-foreground/40 hover:shadow-lg hover:scale-[1.02] transition-all duration-300 backdrop-blur-sm">
 
                 View Repository
                 <ArrowRight size={16} />

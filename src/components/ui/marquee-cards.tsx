@@ -10,10 +10,15 @@ export interface TestimonialCard {
 const Card = ({ card }: { card: TestimonialCard }) => (
   <div
     className={cn(
-      "flex-shrink-0 w-72 md:w-80 bg-white border border-neutral-200 rounded-2xl p-6",
-      "transition-all duration-300 hover:shadow-[0_8px_32px_-8px_rgba(0,0,0,0.18)] hover:-translate-y-1",
+      "flex-shrink-0 w-72 md:w-80 rounded-2xl p-6",
+      "transition-all duration-300 hover:shadow-[0_8px_32px_-8px_rgba(160,76,150,0.18)] hover:-translate-y-1",
       "mx-3"
     )}
+    style={{
+      background: "hsla(0, 0%, 100%, 0.7)",
+      backdropFilter: "blur(16px)",
+      border: "1px solid hsla(296, 30%, 82%, 0.5)",
+    }}
   >
     <div className="flex items-center gap-3 mb-4">
       <img
@@ -52,9 +57,9 @@ function MarqueeRow({
   return (
     <div className="overflow-hidden relative w-full">
       {/* Left fade */}
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-24 z-10 bg-gradient-to-r from-white to-transparent" />
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-24 z-10" style={{ background: "linear-gradient(to right, #f3eef5, transparent)" }} />
       {/* Right fade */}
-      <div className="pointer-events-none absolute right-0 top-0 h-full w-24 z-10 bg-gradient-to-l from-white to-transparent" />
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-24 z-10" style={{ background: "linear-gradient(to left, #f3eef5, transparent)" }} />
 
       <div
         className="flex"

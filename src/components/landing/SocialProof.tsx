@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import MarqueeTestimonials from "@/components/ui/marquee-cards";
+import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 
 const TESTIMONIALS = [
   {
@@ -88,29 +89,41 @@ const TESTIMONIALS = [
   },
 ];
 
+const headingWords = [
+  { text: "Loved" },
+  { text: "by" },
+  { text: "the" },
+  { text: "Web3", className: "text-[#a04c96]" },
+  { text: "Community", className: "text-[#a04c96]" },
+];
+
 const SocialProof = () => {
   return (
     <section
-      className="section-padding section-divider overflow-hidden"
-      style={{ background: "#ffffff" }}
+      className="section-padding section-divider overflow-hidden relative"
+      style={{
+        background: "linear-gradient(180deg, #faf8fb 0%, #f3eef5 50%, #ede6f0 100%)",
+      }}
       aria-labelledby="social-proof-heading"
     >
-      <div className="max-w-7xl mx-auto w-full">
-        {/* Header */}
+      {/* Subtle decorative orbs */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 rounded-full opacity-20 blur-[120px] pointer-events-none" style={{ background: "#c9bed1" }} />
+      <div className="absolute bottom-0 right-1/4 w-80 h-80 rounded-full opacity-15 blur-[100px] pointer-events-none" style={{ background: "#a04c96" }} />
+
+      <div className="max-w-7xl mx-auto w-full relative z-10">
+        {/* Typewriter heading */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.55 }}
-          className="text-center mb-6"
+          className="flex justify-center mb-6"
         >
-          <h2
-            id="social-proof-heading"
-            className="font-display font-bold text-[#000000] leading-tight tracking-[-0.02em]"
-            style={{ fontSize: "clamp(2.25rem, 5vw, 3.25rem)" }}
-          >
-            Loved by the Community
-          </h2>
+          <TypewriterEffect
+            words={headingWords}
+            className="font-display font-bold leading-tight tracking-[-0.02em]"
+            cursorClassName="bg-[#a04c96]"
+          />
         </motion.div>
 
         {/* Sub-description */}
@@ -119,7 +132,7 @@ const SocialProof = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-center text-neutral-600 font-sans mb-16 max-w-2xl mx-auto"
+          className="text-center text-muted-foreground font-sans mb-16 max-w-2xl mx-auto"
           style={{ fontSize: "1.125rem", lineHeight: 1.6 }}
         >
           See what our early builders, hackathon partners, and community are saying.
@@ -151,7 +164,7 @@ const SocialProof = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Join the conversation about TempWallets on X (Twitter)"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-[#000000] text-white font-semibold rounded-xl font-sans text-base transition-all duration-300 hover:bg-neutral-800 hover:shadow-[0_6px_24px_-6px_rgba(0,0,0,0.35)] hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-foreground text-background font-semibold text-base hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
           >
             Join the Conversation on X
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

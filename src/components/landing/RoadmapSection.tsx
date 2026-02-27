@@ -10,48 +10,39 @@ const columns = [
     sublabel: "In Progress",
     image: roadmapNow,
     items: ["Yellow integration", "Lightning Node Module", "Multi-chain expansion"],
-    glassBg: "hsla(225, 50%, 6%, 0.85)",
-    glassBorder: "hsla(217, 91%, 60%, 0.2)",
-    glowColor: "217, 91%, 60%",
-    accentDot: "hsl(217, 91%, 60%)",
-    badgeBg: "hsla(217, 91%, 60%, 0.15)",
-    badgeBorder: "hsla(217, 91%, 60%, 0.35)",
-    badgeText: "hsl(217, 91%, 70%)",
-    textColor: "hsl(220, 20%, 85%)",
-    mutedText: "hsl(220, 15%, 65%)",
-    isDark: true,
+    glassBg: "hsla(296, 30%, 82%, 0.12)",
+    glassBorder: "hsla(296, 52%, 46%, 0.25)",
+    glowColor: "296, 52%, 46%",
+    accentDot: "#a04c96",
+    badgeBg: "hsla(296, 52%, 46%, 0.18)",
+    badgeBorder: "hsla(296, 52%, 46%, 0.4)",
+    badgeText: "#a04c96",
   },
   {
     label: "NEXT",
     sublabel: "Coming Soon",
     image: roadmapNext,
     items: ["User profiles & settings", "Address book", "Android app"],
-    glassBg: "hsla(0, 0%, 100%, 0.04)",
-    glassBorder: "hsla(187, 85%, 53%, 0.18)",
-    glowColor: "187, 85%, 53%",
-    accentDot: "hsl(187, 85%, 53%)",
-    badgeBg: "hsla(187, 85%, 53%, 0.12)",
-    badgeBorder: "hsla(187, 85%, 53%, 0.3)",
-    badgeText: "hsl(187, 85%, 60%)",
-    textColor: undefined,
-    mutedText: undefined,
-    isDark: false,
+    glassBg: "hsla(257, 13%, 44%, 0.08)",
+    glassBorder: "hsla(257, 13%, 44%, 0.2)",
+    glowColor: "257, 13%, 44%",
+    accentDot: "#686379",
+    badgeBg: "hsla(257, 13%, 44%, 0.14)",
+    badgeBorder: "hsla(257, 13%, 44%, 0.35)",
+    badgeText: "#686379",
   },
   {
     label: "LATER",
     sublabel: "Planned",
     image: roadmapLater,
     items: ["Telegram Mini App", "Tip Gas Tank feature", "Analytics & dashboard upgrades"],
-    glassBg: "hsla(0, 0%, 100%, 0.04)",
-    glassBorder: "hsla(265, 80%, 65%, 0.18)",
-    glowColor: "265, 80%, 65%",
-    accentDot: "hsl(265, 80%, 65%)",
-    badgeBg: "hsla(265, 80%, 65%, 0.12)",
-    badgeBorder: "hsla(265, 80%, 65%, 0.3)",
-    badgeText: "hsl(265, 80%, 70%)",
-    textColor: undefined,
-    mutedText: undefined,
-    isDark: false,
+    glassBg: "hsla(302, 20%, 67%, 0.08)",
+    glassBorder: "hsla(302, 20%, 67%, 0.2)",
+    glowColor: "302, 20%, 67%",
+    accentDot: "#ab86aa",
+    badgeBg: "hsla(302, 20%, 67%, 0.14)",
+    badgeBorder: "hsla(302, 20%, 67%, 0.35)",
+    badgeText: "#ab86aa",
   },
 ];
 
@@ -84,30 +75,40 @@ const RoadmapCard = ({
       onMouseMove={handleMouseMove}
       className="group relative rounded-3xl p-8 md:p-10 min-h-[480px] flex flex-col transition-all duration-500 hover:scale-[1.02] overflow-hidden"
       style={{
-        background: col.isDark
-          ? col.glassBg
-          : col.glassBg,
+        background: col.glassBg,
         backdropFilter: "blur(24px)",
         WebkitBackdropFilter: "blur(24px)",
         border: `1px solid ${col.glassBorder}`,
-        boxShadow: col.isDark
-          ? `0 8px 40px -12px hsla(${col.glowColor}, 0.25), inset 0 1px 0 hsla(0, 0%, 100%, 0.05)`
-          : "0 4px 30px rgba(0, 0, 0, 0.06), inset 0 1px 0 hsla(0, 0%, 100%, 0.6)",
+        boxShadow: `0 8px 40px -12px hsla(${col.glowColor}, 0.15), inset 0 1px 0 hsla(0, 0%, 100%, 0.5)`,
       }}
     >
-      {/* Spotlight follow glow */}
+      {/* Floating ambient glow - always visible */}
+      <motion.div
+        className="pointer-events-none absolute -inset-px rounded-3xl z-0"
+        animate={{
+          background: [
+            `radial-gradient(ellipse 60% 40% at 20% 30%, hsla(${col.glowColor}, 0.12), transparent 70%)`,
+            `radial-gradient(ellipse 60% 40% at 80% 70%, hsla(${col.glowColor}, 0.12), transparent 70%)`,
+            `radial-gradient(ellipse 60% 40% at 50% 20%, hsla(${col.glowColor}, 0.12), transparent 70%)`,
+            `radial-gradient(ellipse 60% 40% at 20% 30%, hsla(${col.glowColor}, 0.12), transparent 70%)`,
+          ],
+        }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      {/* Cursor spotlight on hover */}
       <motion.div
         className="pointer-events-none absolute z-0 -inset-px rounded-3xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
         style={{
-          background: useMotionTemplate`radial-gradient(450px circle at ${mouseX}px ${mouseY}px, hsla(${col.glowColor}, 0.15), transparent 65%)`,
+          background: useMotionTemplate`radial-gradient(400px circle at ${mouseX}px ${mouseY}px, hsla(${col.glowColor}, 0.18), transparent 65%)`,
         }}
       />
 
-      {/* Top glow accent */}
+      {/* Top shimmer line */}
       <div
-        className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+        className="absolute top-0 left-[10%] right-[10%] h-px z-10"
         style={{
-          background: `radial-gradient(ellipse 70% 50% at 50% 0%, hsla(${col.glowColor}, 0.25), transparent 70%)`,
+          background: `linear-gradient(90deg, transparent, ${col.accentDot}44, transparent)`,
         }}
       />
 
@@ -125,24 +126,28 @@ const RoadmapCard = ({
 
       {/* Modern Badge */}
       <div className="relative z-10 mb-8">
-        <div
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-2xl text-xs font-bold tracking-[0.18em] uppercase"
+        <motion.div
+          className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full text-xs font-bold tracking-[0.18em] uppercase"
           style={{
             background: col.badgeBg,
             border: `1px solid ${col.badgeBorder}`,
             color: col.badgeText,
-            boxShadow: `0 0 20px -6px hsla(${col.glowColor}, 0.3)`,
+            boxShadow: `0 0 24px -8px hsla(${col.glowColor}, 0.3)`,
           }}
+          whileHover={{ scale: 1.05 }}
+          transition={{ type: "spring", stiffness: 400, damping: 20 }}
         >
-          <span
-            className="w-2 h-2 rounded-full animate-pulse"
+          <motion.span
+            className="w-2 h-2 rounded-full"
             style={{ backgroundColor: col.accentDot }}
+            animate={{ opacity: [1, 0.4, 1] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           />
           {col.label}
-          <span className="text-[0.6rem] font-medium tracking-wider opacity-70 normal-case">
+          <span className="text-[0.6rem] font-medium tracking-wider opacity-60 normal-case">
             · {col.sublabel}
           </span>
-        </div>
+        </motion.div>
       </div>
 
       {/* Items */}
@@ -154,23 +159,13 @@ const RoadmapCard = ({
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.45, delay: index * 0.15 + i * 0.1 }}
-            className="flex items-start gap-3.5 transition-colors duration-300 text-lg"
-            style={{
-              color: col.isDark ? col.mutedText : undefined,
-            }}
+            className="flex items-start gap-3.5 transition-colors duration-300 text-lg text-muted-foreground group-hover:text-foreground/80"
           >
             <span
               className="mt-2 w-2 h-2 rounded-full flex-shrink-0 transition-all duration-500 group-hover:shadow-[0_0_10px_3px]"
-              style={{
-                backgroundColor: col.accentDot,
-              }}
+              style={{ backgroundColor: col.accentDot }}
             />
-            <span className={col.isDark
-              ? "group-hover:text-white/90 transition-colors duration-300"
-              : "text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300"
-            }>
-              {item}
-            </span>
+            <span>{item}</span>
           </motion.li>
         ))}
       </ul>
