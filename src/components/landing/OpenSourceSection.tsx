@@ -98,7 +98,6 @@ const OpenSourceSection = () => {
                 aria-label="Star TempWallets on GitHub"
                 className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-foreground text-background font-semibold text-base hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
 
-                <Star size={16} />
                 Star on GitHub
               </a>
               <a
