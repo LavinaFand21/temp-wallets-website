@@ -24,8 +24,7 @@ const Footer = () => {
           <img
             src={logo}
             alt="TempWallets logo"
-            className="w-full max-h-20 sm:max-h-24 object-contain object-left" />
-
+            className="w-full h-auto object-contain object-left" />
         </div>
 
         {/* Row 2: Left desc + Right links */}
@@ -42,28 +41,26 @@ const Footer = () => {
           </div>
 
           {/* Right: Links */}
-          <div className="flex-1 space-y-6">
-            {/* Row 1: White button links */}
+          <div className="flex-1 flex flex-col items-start lg:items-end gap-6">
+            {/* Row 1: Outline button links (matches hero "Launch Wallet" style) */}
             <nav className="flex flex-wrap gap-3" aria-label="Product links">
               {productLinks.map((l) =>
               <a
                 key={l.label}
                 href={l.href}
-                className="inline-flex items-center justify-center rounded-xl bg-background text-foreground border border-border px-5 py-2.5 text-sm font-medium transition-all duration-200 hover:bg-foreground hover:text-background hover:border-foreground">
-
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-foreground/20 text-foreground font-semibold text-sm hover:border-foreground/40 hover:shadow-lg hover:scale-[1.02] transition-all duration-300 backdrop-blur-sm">
                   {l.label}
                 </a>
               )}
             </nav>
 
-            {/* Row 2: Text links */}
+            {/* Row 2: Text links – right aligned */}
             <nav className="flex flex-wrap gap-6" aria-label="Resource links">
               {resourceLinks.map((l) =>
               <a
                 key={l.label}
                 href={l.href}
                 className="text-sm font-medium text-foreground hover:underline underline-offset-4 transition-colors">
-
                   {l.label}
                 </a>
               )}
