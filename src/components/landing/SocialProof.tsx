@@ -164,7 +164,7 @@ const SocialProof = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Join the conversation about TempWallets on X (Twitter)"
-            className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-foreground text-background font-semibold text-base hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full border-2 border-foreground/20 text-foreground font-semibold text-base hover:border-foreground/40 hover:shadow-lg hover:scale-[1.02] transition-all duration-300 backdrop-blur-sm"
           >
             Join the Conversation
           </a>
