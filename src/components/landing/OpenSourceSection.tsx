@@ -91,15 +91,15 @@ const OpenSourceSection = () => {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="https://github.com/tempwallets"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Star TempWallets on GitHub"
-                className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-foreground text-background font-semibold text-base hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
+              
 
-                Star on GitHub
-              </a>
+
+
+
+
+
+
+
               <a
                 href="https://github.com/tempwallets"
                 target="_blank"

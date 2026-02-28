@@ -2,18 +2,18 @@ import logo from "@/assets/logo.png";
 import FooterSocialDock from "./FooterSocialDock";
 
 const productLinks = [
-  { label: "Features", href: "#features" },
-  { label: "Roadmap", href: "#roadmap" },
-  { label: "Contribute", href: "#contribute" },
-  { label: "Privacy Policy", href: "#" },
-  { label: "Terms", href: "#" },
-];
+{ label: "Features", href: "#features" },
+{ label: "Roadmap", href: "#roadmap" },
+{ label: "Contribute", href: "#contribute" },
+{ label: "Privacy Policy", href: "#" },
+{ label: "Terms", href: "#" }];
+
 
 const resourceLinks = [
-  { label: "Pitch Deck", href: "#" },
-  { label: "Whitepaper", href: "#" },
-  { label: "Brand Assets", href: "#" },
-];
+{ label: "Pitch Deck", href: "#" },
+{ label: "Whitepaper", href: "#" },
+{ label: "Brand Assets", href: "#" }];
+
 
 const Footer = () => {
   return (
@@ -24,15 +24,15 @@ const Footer = () => {
           <img
             src={logo}
             alt="TempWallets logo"
-            className="w-full max-h-20 sm:max-h-24 object-contain object-left"
-          />
+            className="w-full max-h-20 sm:max-h-24 object-contain object-left" />
+
         </div>
 
         {/* Row 2: Left desc + Right links */}
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 mb-16 sm:mb-20">
           {/* Left: Brand + Description */}
           <div className="lg:max-w-md flex-shrink-0">
-            <h3 className="font-display font-bold text-foreground text-xl sm:text-2xl tracking-tight mb-3">
+            <h3 className="font-bold text-foreground text-xl tracking-tight mb-3 sm:text-3xl font-sans">
               Built by TempWallets
             </h3>
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
@@ -45,28 +45,28 @@ const Footer = () => {
           <div className="flex-1 space-y-6">
             {/* Row 1: White button links */}
             <nav className="flex flex-wrap gap-3" aria-label="Product links">
-              {productLinks.map((l) => (
-                <a
-                  key={l.label}
-                  href={l.href}
-                  className="inline-flex items-center justify-center rounded-xl bg-background text-foreground border border-border px-5 py-2.5 text-sm font-medium transition-all duration-200 hover:bg-foreground hover:text-background hover:border-foreground"
-                >
+              {productLinks.map((l) =>
+              <a
+                key={l.label}
+                href={l.href}
+                className="inline-flex items-center justify-center rounded-xl bg-background text-foreground border border-border px-5 py-2.5 text-sm font-medium transition-all duration-200 hover:bg-foreground hover:text-background hover:border-foreground">
+
                   {l.label}
                 </a>
-              ))}
+              )}
             </nav>
 
             {/* Row 2: Text links */}
             <nav className="flex flex-wrap gap-6" aria-label="Resource links">
-              {resourceLinks.map((l) => (
-                <a
-                  key={l.label}
-                  href={l.href}
-                  className="text-sm font-medium text-foreground hover:underline underline-offset-4 transition-colors"
-                >
+              {resourceLinks.map((l) =>
+              <a
+                key={l.label}
+                href={l.href}
+                className="text-sm font-medium text-foreground hover:underline underline-offset-4 transition-colors">
+
                   {l.label}
                 </a>
-              ))}
+              )}
             </nav>
           </div>
         </div>
@@ -83,8 +83,8 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>);
+
 };
 
 export default Footer;
