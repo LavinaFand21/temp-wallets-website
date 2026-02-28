@@ -1,6 +1,7 @@
-import { ExternalLink } from "lucide-react";
+import logo from "@/assets/logo.png";
+import FooterSocialDock from "./FooterSocialDock";
 
-const footerLinks = [
+const productLinks = [
   { label: "Features", href: "#features" },
   { label: "Roadmap", href: "#roadmap" },
   { label: "Contribute", href: "#contribute" },
@@ -8,14 +9,7 @@ const footerLinks = [
   { label: "Terms", href: "#" },
 ];
 
-const socialLinks = [
-  { label: "Website", href: "https://tempwallets.com" },
-  { label: "X", href: "https://x.com/tempwallets" },
-  { label: "Telegram", href: "https://t.me/tempwallets" },
-  { label: "Medium", href: "https://medium.com/@tempwallets" },
-];
-
-const extraLinks = [
+const resourceLinks = [
   { label: "Pitch Deck", href: "#" },
   { label: "Whitepaper", href: "#" },
   { label: "Brand Assets", href: "#" },
@@ -23,72 +17,65 @@ const extraLinks = [
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border bg-background">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* Brand */}
-          <div className="sm:col-span-2 lg:col-span-1">
-            <div className="flex items-center gap-2 mb-3">
-              <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-glow-blue to-glow-cyan flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xs">T</span>
-              </div>
-              <span className="font-display font-bold text-foreground">TempWallets</span>
-            </div>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Instant, disposable wallets for Web3 exploration.
+    <footer className="border-t border-border/40 bg-background" style={{ minHeight: 400 }}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+        {/* Top: Logo + Brand */}
+        <div className="mb-12 sm:mb-16">
+          <div className="flex items-center gap-3 mb-2">
+            <img src={logo} alt="TempWallets logo" className="h-10 w-auto object-contain" />
+          </div>
+          <h3 className="font-display font-bold text-foreground text-2xl sm:text-3xl tracking-tight">
+            Built by TempWallets
+          </h3>
+        </div>
+
+        {/* Main content: Description left, Links right */}
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 mb-16 sm:mb-20">
+          {/* Left: Description */}
+          <div className="lg:max-w-md flex-shrink-0">
+            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+              Instant, disposable wallets for Web3 exploration. No setup, no risk
+              – explore freely.
             </p>
           </div>
 
-          {/* Links */}
-          <div>
-            <h4 className="font-semibold text-foreground text-sm mb-4">Product</h4>
-            <ul className="space-y-2">
-              {footerLinks.map((l) => (
-                <li key={l.label}>
-                  <a href={l.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                    {l.label}
-                  </a>
-                </li>
+          {/* Right: Links */}
+          <div className="flex-1 space-y-8">
+            {/* Row 1: Button links */}
+            <nav className="flex flex-wrap gap-3" aria-label="Product links">
+              {productLinks.map((l) => (
+                <a
+                  key={l.label}
+                  href={l.href}
+                  className="inline-flex items-center justify-center rounded-xl bg-foreground text-background px-5 py-2.5 text-sm font-medium transition-all duration-200 hover:bg-background hover:text-foreground hover:ring-1 hover:ring-foreground"
+                >
+                  {l.label}
+                </a>
               ))}
-            </ul>
-          </div>
+            </nav>
 
-          {/* Social */}
-          <div>
-            <h4 className="font-semibold text-foreground text-sm mb-4">Community</h4>
-            <ul className="space-y-2">
-              {socialLinks.map((l) => (
-                <li key={l.label}>
-                  <a
-                    href={l.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1"
-                  >
-                    {l.label}
-                    <ExternalLink size={12} />
-                  </a>
-                </li>
+            {/* Row 2: Text links */}
+            <nav className="flex flex-wrap gap-6" aria-label="Resource links">
+              {resourceLinks.map((l) => (
+                <a
+                  key={l.label}
+                  href={l.href}
+                  className="text-sm font-medium text-foreground hover:underline underline-offset-4 transition-colors"
+                >
+                  {l.label}
+                </a>
               ))}
-            </ul>
-          </div>
-
-          {/* Extra */}
-          <div>
-            <h4 className="font-semibold text-foreground text-sm mb-4">Resources</h4>
-            <ul className="space-y-2">
-              {extraLinks.map((l) => (
-                <li key={l.label}>
-                  <a href={l.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                    {l.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            </nav>
           </div>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-border text-center">
+        {/* Social Dock */}
+        <div className="mb-12">
+          <FooterSocialDock />
+        </div>
+
+        {/* Bottom copyright */}
+        <div className="pt-6 border-t border-border/40 text-center">
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} TempWallets. All rights reserved.
           </p>
