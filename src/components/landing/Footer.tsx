@@ -73,7 +73,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom copyright */}
-        <div className="pt-5 border-t border-border/40 text-center">
+        <div className="pt-3 border-t border-border/40 text-center">
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} TempWallets. All rights reserved.
           </p>
