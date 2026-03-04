@@ -28,7 +28,7 @@ const Footer = () => {
         </div>
 
         {/* Row 2: Left desc + Right links */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 mb-10">
+        <div className="flex flex-col lg:flex-row gap-5 lg:gap-12 mb-6">
           {/* Left: Brand + Description */}
           <div className="lg:max-w-sm flex-shrink-0">
             <h3 className="font-bold text-foreground text-lg tracking-tight mb-2 font-sans">
