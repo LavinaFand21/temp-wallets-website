@@ -80,7 +80,7 @@ const OpenSourceSection = () => {
             </div>
 
             {/* Description */}
-            <h3 className="text-2xl font-bold text-black mb-4 leading-snug">
+            <h3 className="hidden md:block text-2xl font-bold text-black mb-4 leading-snug">
               Open Source on GitHub
             </h3>
             <p className="text-base text-neutral-600 leading-relaxed mb-10 max-w-md">

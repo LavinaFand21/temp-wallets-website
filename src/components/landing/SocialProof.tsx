@@ -157,7 +157,7 @@ const SocialProof = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-16 flex justify-center"
+          className="mt-8 md:mt-16 flex justify-center"
         >
           <a
             href="https://x.com/tempwallets"
