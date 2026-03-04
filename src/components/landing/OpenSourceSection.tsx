@@ -62,7 +62,7 @@ const OpenSourceSection = () => {
             </div>
 
             {/* Stats row */}
-            <div className="flex flex-wrap gap-5 mb-10">
+            <div className="hidden md:flex flex-wrap gap-5 mb-10">
               {[
               { icon: Star, label: "Stars", value: "1.2k" },
               { icon: GitFork, label: "Forks", value: "300" },
