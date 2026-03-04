@@ -186,7 +186,7 @@ const RoadmapSection = () => {
         </motion.div>
 
         {/* Mobile: swipeable carousel */}
-        <div className="block md:hidden">
+        <div className="block md:hidden overflow-hidden">
           <Carousel opts={{ align: "start", loop: false }} className="w-full">
             <CarouselContent className="-ml-3">
               {columns.map((col, i) => (

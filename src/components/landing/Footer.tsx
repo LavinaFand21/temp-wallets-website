@@ -18,9 +18,9 @@ const resourceLinks = [
 const Footer = () => {
   return (
     <footer className="border-t border-border/20 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10">
         {/* Row 1: Full-width logo */}
-        <div className="mb-8">
+        <div className="mb-5">
           <img
             src={logo}
             alt="TempWallets logo"
@@ -28,7 +28,7 @@ const Footer = () => {
         </div>
 
         {/* Row 2: Left desc + Right links */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 mb-10">
+        <div className="flex flex-col lg:flex-row gap-5 lg:gap-12 mb-6">
           {/* Left: Brand + Description */}
           <div className="lg:max-w-sm flex-shrink-0">
             <h3 className="font-bold text-foreground text-lg tracking-tight mb-2 font-sans">
@@ -68,12 +68,12 @@ const Footer = () => {
         </div>
 
         {/* Social Dock */}
-        <div className="mb-8">
+        <div className="mb-4">
           <FooterSocialDock />
         </div>
 
         {/* Bottom copyright */}
-        <div className="pt-5 border-t border-border/40 text-center">
+        <div className="pt-3 border-t border-border/40 text-center">
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} TempWallets. All rights reserved.
           </p>

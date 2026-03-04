@@ -40,7 +40,7 @@ const HeroSection = () => {
 
   return (
     <AuroraBackground className="min-h-[80vh] h-auto" showRadialGradient={true}>
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 pb-10 sm:pb-14">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 pb-4 sm:pb-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left content */}
           <div className="py-[50px]">

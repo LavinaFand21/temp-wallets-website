@@ -42,7 +42,7 @@ const PartnersSection = () => {
         </motion.div>
 
         {/* Mobile: swipeable carousel */}
-        <div className="block sm:hidden">
+        <div className="block sm:hidden overflow-hidden">
           <Carousel opts={{ align: "start", loop: false }} className="w-full">
             <CarouselContent className="-ml-3">
               {partners.map((partner) => (
