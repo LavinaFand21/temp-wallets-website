@@ -8,31 +8,30 @@ const OpenSourceSection = () => {
       className="w-full bg-white border-t border-[#E5E5E5] border-b border-[#E5E5E5]"
       aria-labelledby="opensource-heading">
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
         {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.55 }}
-          className="mb-16 lg:mb-20">
+          className="mb-10 lg:mb-16">
 
           <h2
             id="opensource-heading"
             className="font-display text-[2.25rem] sm:text-[3rem] font-bold text-black leading-[1.08] tracking-[-0.02em] lg:text-7xl">
-
             Built in the Open
           </h2>
-          <p className="hidden md:block mt-5 text-lg text-neutral-600 max-w-2xl leading-relaxed">
+          {/* Description always visible */}
+          <p className="mt-5 text-lg text-neutral-600 max-w-2xl leading-relaxed">
             TempWallets is developed transparently with community collaboration.
-            Developers and students are welcome to contribute and improve the
-            ecosystem.
+            Developers and students are welcome to contribute and improve the ecosystem.
           </p>
         </motion.div>
 
         {/* Main grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
-          {/* Left: Stats + CTAs */}
+          {/* Left: Stats + CTAs — desktop only for stats/heading/description */}
           <motion.div
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -55,23 +54,21 @@ const OpenSourceSection = () => {
                   rel="noopener noreferrer"
                   aria-label="TempWallets GitHub repository"
                   className="text-base font-bold text-black hover:underline">
-
                   tempwallets / core
                 </a>
               </div>
             </div>
 
-            {/* Stats row */}
+            {/* Stats row — desktop only */}
             <div className="hidden md:flex flex-wrap gap-5 mb-10">
               {[
-              { icon: Star, label: "Stars", value: "1.2k" },
-              { icon: GitFork, label: "Forks", value: "300" },
-              { icon: Users, label: "Contributors", value: "45" }].
-              map(({ icon: Icon, label, value }) =>
-              <div
-                key={label}
-                className="flex items-center gap-2 px-4 py-2.5 rounded-full border border-neutral-200 bg-neutral-50">
-
+                { icon: Star, label: "Stars", value: "1.2k" },
+                { icon: GitFork, label: "Forks", value: "300" },
+                { icon: Users, label: "Contributors", value: "45" },
+              ].map(({ icon: Icon, label, value }) =>
+                <div
+                  key={label}
+                  className="flex items-center gap-2 px-4 py-2.5 rounded-full border border-neutral-200 bg-neutral-50">
                   <Icon size={14} className="text-black" />
                   <span className="text-sm font-semibold text-black">{value}</span>
                   <span className="text-sm text-neutral-500">{label}</span>
@@ -79,41 +76,21 @@ const OpenSourceSection = () => {
               )}
             </div>
 
-            {/* Description */}
-            <h3 className="hidden md:block text-2xl font-bold text-black mb-4 leading-snug">
-              Open Source on GitHub
-            </h3>
-            <p className="hidden md:block text-base text-neutral-600 leading-relaxed mb-10 max-w-md">
-              Fully open-source and auditable. Join our community, review the
-              code, submit PRs, or fork and build your own wallet experience on
-              top of TempWallets.
-            </p>
-
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 md:mt-0 mt-0">
-              
-
-
-
-
-
-
-
-
+            {/* CTA — desktop only */}
+            <div className="hidden md:flex flex-col sm:flex-row gap-4">
               <a
                 href="https://github.com/tempwallets"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="View TempWallets repository on GitHub"
                 className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full border-2 border-foreground/20 text-foreground font-semibold text-base hover:border-foreground/40 hover:shadow-lg hover:scale-[1.02] transition-all duration-300 backdrop-blur-sm">
-
                 View Repository
                 <ArrowRight size={16} />
               </a>
             </div>
           </motion.div>
 
-          {/* Right: Code terminal mockup — on mobile, view repo button goes below */}
+          {/* Right: Code terminal */}
           <motion.div
             initial={{ opacity: 0, x: 24 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -165,7 +142,7 @@ const OpenSourceSection = () => {
                 </div>
               </div>
 
-              {/* Mobile: view repo button inside terminal section */}
+              {/* Mobile: view repo button below terminal */}
               <div className="block md:hidden px-5 py-3 bg-neutral-900 border-t border-neutral-700">
                 <a
                   href="https://github.com/tempwallets"
@@ -199,8 +176,8 @@ const OpenSourceSection = () => {
           </motion.div>
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 export default OpenSourceSection;

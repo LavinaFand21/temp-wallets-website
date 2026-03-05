@@ -1,7 +1,7 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { useInView } from "framer-motion";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import step1Img from "@/assets/step-1.png";
 import step2Img from "@/assets/step-2.png";
 import step3Img from "@/assets/step-3.png";
@@ -61,25 +61,26 @@ const StepCard = ({ step, i }: { step: typeof steps[0]; i: number }) => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-50px" }}
     transition={{ duration: 0.5, delay: i * 0.15 }}
-    className="group rounded-3xl p-6 md:p-8 flex flex-col justify-between transition-all duration-300 hover:scale-[1.02] h-full"
+    className="group rounded-3xl p-6 md:p-8 flex flex-col items-center text-center justify-between transition-all duration-300 hover:scale-[1.02] h-full"
     style={{
       background: step.glassBg,
       backdropFilter: "blur(24px)",
       WebkitBackdropFilter: "blur(24px)",
       border: `1px solid ${step.glassBorder}`,
+      boxShadow: "0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.6)",
       minHeight: 300,
     }}
   >
-    <div>
+    <div className="w-full text-center">
       <span className="text-xs text-muted-foreground tracking-[0.25em] font-semibold uppercase">
         Step {step.step}
       </span>
-      <h3 className="mt-3 font-display text-[1.5rem] md:text-[1.75rem] text-foreground font-bold leading-tight">
+      <h3 className="mt-3 font-display text-[1.4rem] md:text-[1.6rem] text-foreground font-bold leading-tight text-center">
         {step.title}
       </h3>
     </div>
     <IconWithAnimation src={step.icon} alt={step.title} />
-    <p className="text-muted-foreground text-sm leading-relaxed">{step.description}</p>
+    <p className="text-foreground/80 text-sm leading-relaxed text-center">{step.description}</p>
   </motion.div>
 );
 
@@ -94,26 +95,30 @@ const HowItWorks = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-8 sm:mb-16"
         >
-          <h2 className="text-[2.5rem] md:text-[4rem] lg:text-[4.5rem] font-bold text-foreground font-display leading-[1.05] tracking-tight">
+          <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] font-bold text-foreground font-display leading-[1.05] tracking-tight">
             How It Works
           </h2>
-          <p className="mt-4 text-muted-foreground text-lg md:text-2xl max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-3 text-muted-foreground text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
             Three simple steps to get your instant disposable wallet.
           </p>
         </motion.div>
 
-        {/* Mobile: swipeable carousel */}
-        <div className="block md:hidden overflow-hidden touch-pan-y">
-          <Carousel opts={{ align: "start", loop: false, dragFree: false, watchDrag: true }} className="w-full select-none">
-            <CarouselContent className="-ml-3">
+        {/* Mobile: swipeable carousel with arrows */}
+        <div className="block md:hidden">
+          <Carousel opts={{ align: "start", loop: false, dragFree: true, watchDrag: true }} className="w-full select-none">
+            <CarouselContent className="-ml-3 touch-pan-y">
               {steps.map((step, i) => (
                 <CarouselItem key={step.step} className="pl-3 basis-[85%]">
                   <StepCard step={step} i={i} />
                 </CarouselItem>
               ))}
             </CarouselContent>
+            <div className="flex items-center justify-center gap-3 mt-4">
+              <CarouselPrevious className="relative static translate-y-0 left-auto top-auto w-9 h-9 rounded-full border border-border/60 bg-background/80 shadow-sm hover:bg-background" />
+              <span className="text-xs text-muted-foreground opacity-60">Swipe to explore</span>
+              <CarouselNext className="relative static translate-y-0 right-auto top-auto w-9 h-9 rounded-full border border-border/60 bg-background/80 shadow-sm hover:bg-background" />
+            </div>
           </Carousel>
-          <p className="text-center text-xs text-muted-foreground mt-3 opacity-60">Swipe to explore →</p>
         </div>
 
         {/* Desktop: grid */}

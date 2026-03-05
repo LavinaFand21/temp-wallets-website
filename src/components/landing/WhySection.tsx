@@ -1,7 +1,8 @@
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import whyIcon1 from "@/assets/why-icon-1.png";
 import whyIcon2 from "@/assets/why-icon-2.png";
 import whyIcon3 from "@/assets/why-icon-3.png";
@@ -75,13 +76,13 @@ const WhyCard = ({ r, i }: { r: typeof reasons[0]; i: number }) => (
   >
     <CardContainer containerClassName="w-full h-full">
       <CardBody
-        className="relative w-full rounded-3xl p-6 flex flex-col justify-between transition-all duration-500 ease-out group-hover:scale-[1.03] h-full"
+        className="relative w-full rounded-3xl p-6 flex flex-col items-center text-center justify-between transition-all duration-500 ease-out group-hover:scale-[1.03] h-full"
         style={{
           background: r.glassBg,
           backdropFilter: "blur(24px)",
           WebkitBackdropFilter: "blur(24px)",
           border: `1px solid ${r.glassBorder}`,
-          boxShadow: "0 4px 30px rgba(0, 0, 0, 0.06)",
+          boxShadow: "0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.6)",
           minHeight: 280,
         } as React.CSSProperties}
       >
@@ -89,13 +90,13 @@ const WhyCard = ({ r, i }: { r: typeof reasons[0]; i: number }) => (
           style={{ background: `radial-gradient(ellipse at 50% 0%, ${r.hoverGlow}, transparent 70%)` }}
         />
         <CardItem translateZ={20} className="w-full relative z-10">
-          <h3 className="font-display text-lg md:text-xl font-bold text-foreground leading-tight">{r.title}</h3>
+          <h3 className="font-display text-lg md:text-xl font-bold text-foreground leading-tight text-center">{r.title}</h3>
         </CardItem>
         <CardItem translateZ={40} className="w-full relative z-10">
           <AnimatedIcon src={r.icon} alt={r.title} />
         </CardItem>
         <CardItem translateZ={15} className="w-full relative z-10">
-          <p className="text-muted-foreground text-sm leading-relaxed">{r.description}</p>
+          <p className="text-foreground/80 text-sm leading-relaxed text-center">{r.description}</p>
         </CardItem>
       </CardBody>
     </CardContainer>
@@ -111,25 +112,32 @@ const WhySection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="mb-8 sm:mb-14"
+          className="mb-8 sm:mb-14 text-center"
         >
-          <h2 className="text-[2.5rem] md:text-[4rem] font-bold text-foreground font-display leading-[1.05] tracking-tight lg:text-8xl">
+          <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] font-bold text-foreground font-display leading-[1.05] tracking-tight">
             Why TempWallets?
           </h2>
+          <p className="mt-3 text-muted-foreground text-base md:text-lg max-w-2xl leading-relaxed mx-auto">
+            Built for real use. Designed to be simple.
+          </p>
         </motion.div>
 
-        {/* Mobile: swipeable carousel */}
-        <div className="block md:hidden overflow-hidden touch-pan-y">
-          <Carousel opts={{ align: "start", loop: false, dragFree: false, watchDrag: true }} className="w-full select-none">
-            <CarouselContent className="-ml-3">
+        {/* Mobile: swipeable carousel with arrows */}
+        <div className="block md:hidden">
+          <Carousel opts={{ align: "start", loop: false, dragFree: true, watchDrag: true }} className="w-full select-none">
+            <CarouselContent className="-ml-3 touch-pan-y">
               {reasons.map((r, i) => (
                 <CarouselItem key={r.title} className="pl-3 basis-[85%]">
                   <WhyCard r={r} i={i} />
                 </CarouselItem>
               ))}
             </CarouselContent>
+            <div className="flex items-center justify-center gap-3 mt-4">
+              <CarouselPrevious className="relative static translate-y-0 left-auto top-auto w-9 h-9 rounded-full border border-border/60 bg-background/80 shadow-sm hover:bg-background" />
+              <span className="text-xs text-muted-foreground opacity-60">Swipe to explore</span>
+              <CarouselNext className="relative static translate-y-0 right-auto top-auto w-9 h-9 rounded-full border border-border/60 bg-background/80 shadow-sm hover:bg-background" />
+            </div>
           </Carousel>
-          <p className="text-center text-xs text-muted-foreground mt-3 opacity-60">Swipe to explore →</p>
         </div>
 
         {/* Desktop: grid */}
