@@ -83,14 +83,14 @@ const OpenSourceSection = () => {
             <h3 className="hidden md:block text-2xl font-bold text-black mb-4 leading-snug">
               Open Source on GitHub
             </h3>
-            <p className="text-base text-neutral-600 leading-relaxed mb-10 max-w-md">
+            <p className="hidden md:block text-base text-neutral-600 leading-relaxed mb-10 max-w-md">
               Fully open-source and auditable. Join our community, review the
               code, submit PRs, or fork and build your own wallet experience on
               top of TempWallets.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 md:mt-0 mt-0">
               
 
 
