@@ -121,7 +121,7 @@ const SocialProof = () => {
         >
           <TypewriterEffect
             words={headingWords}
-            className="font-display font-bold leading-tight tracking-[-0.02em]"
+            className="font-display font-bold leading-tight tracking-[-0.02em] text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
             cursorClassName="bg-[#a04c96]"
           />
         </motion.div>
