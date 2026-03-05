@@ -123,8 +123,8 @@ const FeaturesSection = () => {
         </motion.div>
 
         {/* Mobile: swipeable carousel */}
-        <div className="block md:hidden overflow-hidden">
-          <Carousel opts={{ align: "start", loop: false }} className="w-full">
+        <div className="block md:hidden overflow-hidden touch-pan-y">
+          <Carousel opts={{ align: "start", loop: false, dragFree: false, watchDrag: true }} className="w-full select-none">
             <CarouselContent className="-ml-3">
               {features.map((f, i) => (
                 <CarouselItem key={f.title} className="pl-3 basis-[85%]">

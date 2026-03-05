@@ -42,13 +42,13 @@ const HeroSection = () => {
     <AuroraBackground className="min-h-[80vh] h-auto" showRadialGradient={true}>
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 pb-4 sm:pb-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Left content */}
-          <div className="py-[50px]">
+          {/* Content — centered on mobile, left-aligned on desktop */}
+          <div className="py-[50px] text-center lg:text-left">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="font-display text-[2.75rem] sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] font-bold text-foreground leading-[1.05] tracking-[-0.02em]">
+              className="font-display text-[3rem] sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] font-bold text-foreground leading-[1.05] tracking-[-0.02em]">
 
               <span className="block">Your First</span>
               <span className="block text-[#a167a8] font-extrabold">
@@ -62,7 +62,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="mt-6 text-lg text-muted-foreground max-w-lg leading-relaxed">
+              className="mt-4 text-base sm:text-lg text-muted-foreground max-w-lg leading-relaxed mx-auto lg:mx-0">
 
               Connect to DApps, test new apps, or receive crypto safely without
               installing extensions or risking your main wallet.
@@ -72,24 +72,22 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.5 }}
-              className="mt-10">
+              className="mt-8">
 
-              <div className="flex flex-wrap items-center gap-4">
+              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
                 <a
                   href="#how-it-works"
-                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-foreground text-background font-semibold text-base hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
-
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-foreground text-background font-semibold text-sm sm:text-base hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
                   Get Started
-                  <ArrowRight size={18} />
+                  <ArrowRight size={16} />
                 </a>
                 <a
                   href="https://app.tempwallets.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full border-2 border-foreground/20 text-foreground font-semibold text-base hover:border-foreground/40 hover:shadow-lg hover:scale-[1.02] transition-all duration-300 backdrop-blur-sm">
-
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full border-2 border-foreground/20 text-foreground font-semibold text-sm sm:text-base hover:border-foreground/40 hover:shadow-lg hover:scale-[1.02] transition-all duration-300 backdrop-blur-sm">
                   Launch Wallet
-                  <ArrowRight size={18} />
+                  <ArrowRight size={16} />
                 </a>
               </div>
             </motion.div>
@@ -99,7 +97,7 @@ const HeroSection = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.7 }}
-              className="mt-12 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
+              className="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-x-5 gap-y-2 text-sm text-muted-foreground">
 
               <span className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary" />

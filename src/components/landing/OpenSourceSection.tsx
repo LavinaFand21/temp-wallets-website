@@ -23,7 +23,7 @@ const OpenSourceSection = () => {
 
             Built in the Open
           </h2>
-          <p className="mt-5 text-lg text-neutral-600 max-w-2xl leading-relaxed">
+          <p className="hidden md:block mt-5 text-lg text-neutral-600 max-w-2xl leading-relaxed">
             TempWallets is developed transparently with community collaboration.
             Developers and students are welcome to contribute and improve the
             ecosystem.
@@ -31,7 +31,7 @@ const OpenSourceSection = () => {
         </motion.div>
 
         {/* Main grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
           {/* Left: Stats + CTAs */}
           <motion.div
             initial={{ opacity: 0, x: -24 }}
@@ -83,14 +83,14 @@ const OpenSourceSection = () => {
             <h3 className="hidden md:block text-2xl font-bold text-black mb-4 leading-snug">
               Open Source on GitHub
             </h3>
-            <p className="text-base text-neutral-600 leading-relaxed mb-10 max-w-md">
+            <p className="hidden md:block text-base text-neutral-600 leading-relaxed mb-10 max-w-md">
               Fully open-source and auditable. Join our community, review the
               code, submit PRs, or fork and build your own wallet experience on
               top of TempWallets.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 md:mt-0 mt-0">
               
 
 
@@ -113,13 +113,13 @@ const OpenSourceSection = () => {
             </div>
           </motion.div>
 
-          {/* Right: Code terminal mockup */}
+          {/* Right: Code terminal mockup — on mobile, view repo button goes below */}
           <motion.div
             initial={{ opacity: 0, x: 24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.55, delay: 0.2 }}
-            className="group">
+            className="group flex flex-col gap-4">
 
             <div className="rounded-2xl overflow-hidden border border-neutral-200 shadow-2xl hover:scale-[1.02] transition-transform duration-300">
               {/* Terminal top bar */}
@@ -163,6 +163,18 @@ const OpenSourceSection = () => {
                 <div className="mt-5 text-neutral-200">
                   &gt; Temporary wallet ready 🚀
                 </div>
+              </div>
+
+              {/* Mobile: view repo button inside terminal section */}
+              <div className="block md:hidden px-5 py-3 bg-neutral-900 border-t border-neutral-700">
+                <a
+                  href="https://github.com/tempwallets"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 w-full px-6 py-3 rounded-full border border-neutral-600 text-neutral-200 font-semibold text-sm hover:border-neutral-400 hover:text-white transition-all duration-300">
+                  View Repository
+                  <ArrowRight size={14} />
+                </a>
               </div>
 
               {/* Repo stats footer bar */}
