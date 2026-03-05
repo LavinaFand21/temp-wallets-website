@@ -1,6 +1,6 @@
 import { motion, useMotionValue, useMotionTemplate } from "framer-motion";
 import React, { MouseEvent as ReactMouseEvent } from "react";
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import roadmapNow from "@/assets/roadmap-now.png";
 import roadmapNext from "@/assets/roadmap-next.png";
 import roadmapLater from "@/assets/roadmap-later.png";
@@ -70,7 +70,7 @@ const RoadmapCard = ({ col, index }: { col: (typeof columns)[0]; index: number }
         backdropFilter: "blur(24px)",
         WebkitBackdropFilter: "blur(24px)",
         border: `1px solid ${col.glassBorder}`,
-        boxShadow: `0 8px 40px -12px hsla(${col.glowColor}, 0.15), inset 0 1px 0 hsla(0, 0%, 100%, 0.5)`,
+        boxShadow: `0 8px 40px -12px hsla(${col.glowColor}, 0.15), 0 4px 16px rgba(0,0,0,0.1), inset 0 1px 0 hsla(0, 0%, 100%, 0.5)`,
         minHeight: 320,
       }}
     >
@@ -103,7 +103,7 @@ const RoadmapCard = ({ col, index }: { col: (typeof columns)[0]; index: number }
       />
 
       {/* Icon */}
-      <div className="relative z-10 mb-4">
+      <div className="relative z-10 mb-4 flex justify-center">
         <motion.img
           src={col.image}
           alt={`${col.label} roadmap icon`}
@@ -115,7 +115,7 @@ const RoadmapCard = ({ col, index }: { col: (typeof columns)[0]; index: number }
       </div>
 
       {/* Badge */}
-      <div className="relative z-10 mb-5">
+      <div className="relative z-10 mb-5 flex justify-center">
         <motion.div
           className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full text-xs font-bold tracking-[0.18em] uppercase"
           style={{
@@ -175,28 +175,32 @@ const RoadmapSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="mb-8 sm:mb-16"
+          className="mb-8 sm:mb-16 text-center"
         >
-          <h2 className="text-[2.5rem] md:text-[4rem] lg:text-[4.5rem] font-bold text-foreground font-display leading-[1.05] tracking-tight">
+          <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] font-bold text-foreground font-display leading-[1.05] tracking-tight">
             Roadmap
           </h2>
-          <p className="mt-4 text-muted-foreground text-lg md:text-2xl max-w-2xl leading-relaxed">
+          <p className="mt-3 text-muted-foreground text-base md:text-lg max-w-2xl leading-relaxed mx-auto">
             What we're building and what's coming next.
           </p>
         </motion.div>
 
-        {/* Mobile: swipeable carousel */}
-        <div className="block md:hidden overflow-hidden touch-pan-y">
-          <Carousel opts={{ align: "start", loop: false, dragFree: false, watchDrag: true }} className="w-full select-none">
-            <CarouselContent className="-ml-3">
+        {/* Mobile: swipeable carousel with arrows */}
+        <div className="block md:hidden">
+          <Carousel opts={{ align: "start", loop: false, dragFree: true, watchDrag: true }} className="w-full select-none">
+            <CarouselContent className="-ml-3 touch-pan-y">
               {columns.map((col, i) => (
                 <CarouselItem key={col.label} className="pl-3 basis-[85%]">
                   <RoadmapCard col={col} index={i} />
                 </CarouselItem>
               ))}
             </CarouselContent>
+            <div className="flex items-center justify-center gap-3 mt-4">
+              <CarouselPrevious className="relative static translate-y-0 left-auto top-auto w-9 h-9 rounded-full border border-border/60 bg-background/80 shadow-sm hover:bg-background" />
+              <span className="text-xs text-muted-foreground opacity-60">Swipe to explore</span>
+              <CarouselNext className="relative static translate-y-0 right-auto top-auto w-9 h-9 rounded-full border border-border/60 bg-background/80 shadow-sm hover:bg-background" />
+            </div>
           </Carousel>
-          <p className="text-center text-xs text-muted-foreground mt-3 opacity-60">Swipe to explore →</p>
         </div>
 
         {/* Desktop: grid */}

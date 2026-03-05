@@ -6,21 +6,21 @@ import inbmLogo from "@/assets/partner-inbm.png";
 import yellowLogo from "@/assets/partner-yellow.png";
 
 const partners = [
-  { name: "Yellow Network", logo: yellowLogo },
-  { name: "Hack Tour India", logo: hacktourLogo },
-  { name: "Polkadot", logo: polkadotLogo },
-  { name: "Web3 Aligarh", logo: web3AligarhLogo },
-  { name: "India Blockchain Month", logo: inbmLogo },
+  { name: "Yellow Network", logo: yellowLogo, scale: 1 },
+  { name: "Hack Tour India", logo: hacktourLogo, scale: 1.4 },
+  { name: "Polkadot", logo: polkadotLogo, scale: 1 },
+  { name: "Web3 Aligarh", logo: web3AligarhLogo, scale: 1 },
+  { name: "India Blockchain Month", logo: inbmLogo, scale: 1 },
 ];
 
 const PartnerCard = ({ partner }: { partner: typeof partners[0] }) => (
-  <div className="rounded-2xl border border-border/60 bg-card flex items-center justify-center py-5 px-6 hover:shadow-md transition-shadow cursor-default w-full h-[76px]">
+  <div className="rounded-2xl border border-border/60 bg-card flex items-center justify-center py-4 px-5 hover:shadow-md transition-shadow cursor-default w-full h-[64px]">
     <img
       src={partner.logo}
       alt={`${partner.name} logo`}
-      className="max-h-10 max-w-full object-contain"
+      className="max-h-8 max-w-full object-contain"
+      style={{ transform: `scale(${partner.scale})` }}
       loading="lazy"
-      style={{ imageRendering: "auto" }}
     />
   </div>
 );
@@ -36,7 +36,7 @@ const PartnersSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-8 sm:mb-10"
         >
-          <h2 className="font-bold text-foreground text-3xl sm:text-4xl md:text-5xl font-sans">
+          <h2 className="font-bold text-foreground text-3xl sm:text-4xl md:text-5xl font-display tracking-tight text-black">
             Built with Leading Web3 Ecosystems
           </h2>
         </motion.div>
@@ -49,14 +49,13 @@ const PartnersSection = () => {
           transition={{ duration: 0.5, delay: 0.15 }}
           className="block sm:hidden"
         >
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-2 gap-2.5">
             {partners.slice(0, 4).map((partner) => (
               <PartnerCard key={partner.name} partner={partner} />
             ))}
           </div>
-          {/* Last card centered */}
-          <div className="mt-3 flex justify-center">
-            <div className="w-[calc(50%-6px)]">
+          <div className="mt-2.5 flex justify-center">
+            <div className="w-[calc(50%-5px)]">
               <PartnerCard partner={partners[4]} />
             </div>
           </div>
@@ -68,17 +67,18 @@ const PartnersSection = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.15 }}
-          className="hidden sm:flex flex-wrap justify-center items-center gap-5"
+          className="hidden sm:flex flex-wrap justify-center items-center gap-4"
         >
           {partners.map((partner) => (
             <div
               key={partner.name}
-              className="rounded-2xl border border-border/60 bg-card flex items-center justify-center py-6 px-8 hover:shadow-md transition-shadow cursor-default w-[160px] h-[88px]"
+              className="rounded-2xl border border-border/60 bg-card flex items-center justify-center py-5 px-7 hover:shadow-md transition-shadow cursor-default w-[148px] h-[80px]"
             >
               <img
                 src={partner.logo}
                 alt={`${partner.name} logo`}
-                className="max-h-12 max-w-full object-contain"
+                className="max-h-10 max-w-full object-contain"
+                style={{ transform: `scale(${partner.scale})` }}
                 loading="lazy"
               />
             </div>
