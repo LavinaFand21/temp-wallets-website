@@ -23,7 +23,7 @@ const OpenSourceSection = () => {
 
             Built in the Open
           </h2>
-          <p className="mt-5 text-lg text-neutral-600 max-w-2xl leading-relaxed">
+          <p className="hidden md:block mt-5 text-lg text-neutral-600 max-w-2xl leading-relaxed">
             TempWallets is developed transparently with community collaboration.
             Developers and students are welcome to contribute and improve the
             ecosystem.
