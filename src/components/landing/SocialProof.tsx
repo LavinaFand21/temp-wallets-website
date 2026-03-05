@@ -132,8 +132,8 @@ const SocialProof = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-center text-muted-foreground font-sans mb-6 md:mb-16 max-w-2xl mx-auto"
-          style={{ fontSize: "1.125rem", lineHeight: 1.6 }}
+          className="text-center text-muted-foreground font-sans mb-6 md:mb-16 max-w-2xl mx-auto text-sm sm:text-base md:text-lg"
+          style={{ lineHeight: 1.6 }}
         >
           See what our early builders, hackathon partners, and community are saying.
         </motion.p>

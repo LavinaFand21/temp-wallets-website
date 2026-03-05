@@ -48,7 +48,7 @@ const NavbarSection = () => {
               <a
                 key={idx}
                 href={item.link}
-                className="text-foreground/70 hover:text-foreground transition-colors text-[10px] font-medium whitespace-nowrap px-2 py-1.5 rounded-full hover:bg-foreground/5"
+                className="text-foreground/70 hover:text-foreground transition-colors text-[11px] font-medium whitespace-nowrap px-2 py-1.5 rounded-full hover:bg-foreground/5"
               >
                 {item.name}
               </a>

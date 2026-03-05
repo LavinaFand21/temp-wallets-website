@@ -137,8 +137,8 @@ export const MobileNav = ({
         background: visible
           ? "rgba(255, 255, 255, 0.82)"
           : "rgba(255, 255, 255, 0.55)",
-        paddingTop: visible ? "5px" : "12px",
-        paddingBottom: visible ? "5px" : "8px",
+        paddingTop: visible ? "10px" : "18px",
+        paddingBottom: visible ? "10px" : "14px",
         borderWidth: "1px",
         borderStyle: "solid",
         borderColor: visible ? "rgba(201, 190, 209, 0.25)" : "transparent",
