@@ -113,13 +113,13 @@ const OpenSourceSection = () => {
             </div>
           </motion.div>
 
-          {/* Right: Code terminal mockup */}
+          {/* Right: Code terminal mockup — on mobile, view repo button goes below */}
           <motion.div
             initial={{ opacity: 0, x: 24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.55, delay: 0.2 }}
-            className="group">
+            className="group flex flex-col gap-4">
 
             <div className="rounded-2xl overflow-hidden border border-neutral-200 shadow-2xl hover:scale-[1.02] transition-transform duration-300">
               {/* Terminal top bar */}
