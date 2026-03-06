@@ -19,13 +19,13 @@ const OpenSourceSection = () => {
 
           <h2
             id="opensource-heading"
-            className="font-display text-[2.25rem] sm:text-[3rem] font-bold text-black leading-[1.08] tracking-[-0.02em] lg:text-7xl">
+            className="font-display text-[2.25rem] sm:text-[3rem] font-bold text-black leading-[1.08] tracking-[-0.02em] lg:text-6xl">
             Built in the Open
           </h2>
           {/* Description always visible */}
-          <p className="mt-5 text-lg text-neutral-600 max-w-2xl leading-relaxed">
-            TempWallets is developed transparently with community collaboration.
-            Developers and students are welcome to contribute and improve the ecosystem.
+          <p className="mt-5 max-w-2xl leading-relaxed text-base text-secondary-foreground">
+            TempWallets is developed transparently with community collaboration. 
+Developers and students are welcome to contribute and improve the ecosystem.
           </p>
         </motion.div>
 
@@ -62,13 +62,13 @@ const OpenSourceSection = () => {
             {/* Stats row — desktop only */}
             <div className="hidden md:flex flex-wrap gap-5 mb-10">
               {[
-                { icon: Star, label: "Stars", value: "1.2k" },
-                { icon: GitFork, label: "Forks", value: "300" },
-                { icon: Users, label: "Contributors", value: "45" },
-              ].map(({ icon: Icon, label, value }) =>
-                <div
-                  key={label}
-                  className="flex items-center gap-2 px-4 py-2.5 rounded-full border border-neutral-200 bg-neutral-50">
+              { icon: Star, label: "Stars", value: "1.2k" },
+              { icon: GitFork, label: "Forks", value: "300" },
+              { icon: Users, label: "Contributors", value: "45" }].
+              map(({ icon: Icon, label, value }) =>
+              <div
+                key={label}
+                className="flex items-center gap-2 px-4 py-2.5 rounded-full border border-neutral-200 bg-neutral-50">
                   <Icon size={14} className="text-black" />
                   <span className="text-sm font-semibold text-black">{value}</span>
                   <span className="text-sm text-neutral-500">{label}</span>
@@ -176,8 +176,8 @@ const OpenSourceSection = () => {
           </motion.div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default OpenSourceSection;
