@@ -13,8 +13,8 @@ const partners = [
   { name: "Polkadot", logo: polkadotLogo, scale: 1, translateX: 0, translateY: 0 },
   { name: "Web3 Aligarh", logo: web3AligarhLogo, scale: 2.2, translateX: 0, translateY: 0 },
   { name: "India Blockchain Month", logo: inbmLogo, scale: 1, translateX: 0, translateY: 0 },
-  { name: "SheFi", logo: shefiLogo, scale: 4.5, translateX: -22, translateY: -50 },
-  { name: "Bitcoin India Conference", logo: bitcoinIndiaConferenceLogo, scale: 5, translateX: -5, translateY: 0 },
+  { name: "SheFi", logo: shefiLogo, scale: 4.5, translateX: 0, translateY: 0, transformOrigin: "75% 30%" },
+  { name: "Bitcoin India Conference", logo: bitcoinIndiaConferenceLogo, scale: 5, translateX: 0, translateY: 0, transformOrigin: "38% center" },
 ];
 
 type Partner = typeof partners[0] & { transformOrigin?: string };
