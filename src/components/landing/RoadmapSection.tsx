@@ -64,7 +64,7 @@ const RoadmapCard = ({ col, index }: { col: (typeof columns)[0]; index: number }
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.7, delay: index * 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
       onMouseMove={handleMouseMove}
-      className="group relative rounded-3xl p-6 md:p-8 flex flex-col transition-all duration-500 hover:scale-[1.02] overflow-hidden h-full"
+      className="group relative rounded-3xl p-6 md:p-8 flex flex-col transition-all duration-500 hover:scale-[1.02] h-full"
       style={{
         background: col.glassBg,
         backdropFilter: "blur(24px)",
