@@ -19,7 +19,7 @@ const features = [
   },
   {
     title: "Multi-Chain Support",
-    description: "Works across major EVM and non-EVM networks out of the box.",
+    description: "Interact across major multiple EVM and non-EVM blockchain networks seamlessly.",
     icon: featureIcon2,
     glassBg: "rgba(160, 76, 150, 0.12)",
     glassBorder: "rgba(160, 76, 150, 0.22)",
