@@ -17,7 +17,7 @@ const partners = [
   { name: "Bitcoin India Conference", logo: bitcoinIndiaConferenceLogo, scale: 5, translateX: 0, translateY: 0, transformOrigin: "38% center" },
 ];
 
-type Partner = typeof partners[0] & { transformOrigin?: string };
+type Partner = { name: string; logo: string; scale: number; translateX: number; translateY: number; transformOrigin?: string };
 
 const PartnerCard = ({ partner }: { partner: Partner }) => (
   <div className="rounded-2xl border border-border/60 bg-card flex items-center justify-center py-4 px-5 hover:shadow-md transition-shadow cursor-default w-full h-[64px] overflow-hidden">
