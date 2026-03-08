@@ -13,7 +13,8 @@ type Partner = {
   scale: number;
   translateX: number;
   translateY: number;
-  bgSize?: string; // use background-image approach for precise centering
+  bgSize?: string;
+  bgPosition?: string;
 };
 
 const partners: Partner[] = [
