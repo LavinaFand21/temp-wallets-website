@@ -7,9 +7,9 @@ import yellowLogo from "@/assets/partner-yellow.png";
 
 const partners = [
   { name: "Yellow Network", logo: yellowLogo, scale: 1 },
-  { name: "Hack Tour India", logo: hacktourLogo, scale: 1.4 },
+  { name: "Hack Tour India", logo: hacktourLogo, scale: 1.9 },
   { name: "Polkadot", logo: polkadotLogo, scale: 1 },
-  { name: "Web3 Aligarh", logo: web3AligarhLogo, scale: 1 },
+  { name: "Web3 Aligarh", logo: web3AligarhLogo, scale: 1.7 },
   { name: "India Blockchain Month", logo: inbmLogo, scale: 1 },
 ];
 
