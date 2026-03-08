@@ -29,7 +29,7 @@ const steps = [
   {
     step: "03",
     title: "Connect or Receive Funds",
-    description: "Connect to DApps via WalletConnect/QR or share the address safely.",
+    description: "Connect to dApps, scan QR codes, or receive crypto without exposing your main wallet.",
     icon: step3Img,
     glassBg: "rgba(104, 99, 121, 0.14)",
     glassBorder: "rgba(104, 99, 121, 0.25)",
