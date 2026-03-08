@@ -161,6 +161,17 @@ Developers and students are welcome to contribute and improve the ecosystem.
                 <span className="text-xs text-neutral-500">MIT License</span>
               </div>
             </div>
+            {/* Mobile: view repo button below the terminal card */}
+            <div className="block md:hidden mt-4">
+              <a
+                href="https://github.com/tempwallets"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-full border-2 border-foreground/20 text-foreground font-semibold text-sm hover:border-foreground/40 hover:shadow-lg transition-all duration-300 backdrop-blur-sm">
+                View Repository
+                <ArrowRight size={14} />
+              </a>
+            </div>
           </motion.div>
         </div>
       </div>
