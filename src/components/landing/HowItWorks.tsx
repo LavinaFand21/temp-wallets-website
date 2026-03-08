@@ -68,16 +68,16 @@ const StepCard = ({ step, i }: { step: typeof steps[0]; i: number }) => (
     transition={{ duration: 0.5, delay: i * 0.15 }}
     className="group h-full p-2"
   >
-    <CardContainer containerClassName="w-full h-full">
+    <CardContainer containerClassName="w-full h-full" style={{ height: "100%" }}>
       <CardBody
-        className="relative w-full rounded-3xl p-6 md:p-8 flex flex-col items-center text-center justify-between transition-all duration-500 ease-out group-hover:scale-[1.03] h-full"
+        className="relative w-full rounded-3xl p-6 md:p-8 flex flex-col items-center text-center justify-between transition-all duration-500 ease-out group-hover:scale-[1.03]"
         style={{
           background: step.glassBg,
           backdropFilter: "blur(24px)",
           WebkitBackdropFilter: "blur(24px)",
           border: `1px solid ${step.glassBorder}`,
           boxShadow: "0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.6)",
-          minHeight: 300,
+          height: "100%",
         } as React.CSSProperties}
       >
         <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
