@@ -204,7 +204,7 @@ const RoadmapSection = () => {
         </div>
 
         {/* Desktop: grid */}
-        <div className="hidden md:grid grid-cols-3 gap-6 lg:gap-8">
+        <div className="hidden md:grid grid-cols-3 gap-6 lg:gap-8 py-2 px-1">
           {columns.map((col, i) => <RoadmapCard key={col.label} col={col} index={i} />)}
         </div>
       </div>

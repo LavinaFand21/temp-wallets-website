@@ -146,7 +146,7 @@ const FeaturesSection = () => {
         </div>
 
         {/* Desktop: grid */}
-        <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-5 py-2 px-1">
           {features.map((f, i) => <FeatureCard key={f.title} f={f} i={i} />)}
         </div>
       </div>

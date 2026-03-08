@@ -141,7 +141,7 @@ const WhySection = () => {
         </div>
 
         {/* Desktop: grid */}
-        <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-5 py-2 px-1">
           {reasons.map((r, i) => <WhyCard key={r.title} r={r} i={i} />)}
         </div>
       </div>
