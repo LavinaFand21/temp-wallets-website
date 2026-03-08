@@ -11,7 +11,7 @@ const steps = [
   {
     step: "01",
     title: "Visit TempWallets",
-    description: "Open the web app on desktop or mobile — no downloads or extensions needed.",
+    description: "Visit the web app on desktop or mobile. No extensions or installations required.",
     icon: step1Img,
     glassBg: "rgba(201, 190, 209, 0.15)",
     glassBorder: "rgba(171, 134, 170, 0.25)",
@@ -20,7 +20,7 @@ const steps = [
   {
     step: "02",
     title: "Get an Instant Wallet",
-    description: "A temporary wallet is generated in seconds — zero setup required.",
+    description: "A disposable wallet is created instantly for secure and isolated interactions.",
     icon: step2Img,
     glassBg: "rgba(160, 76, 150, 0.12)",
     glassBorder: "rgba(160, 76, 150, 0.22)",
@@ -29,7 +29,7 @@ const steps = [
   {
     step: "03",
     title: "Connect or Receive Funds",
-    description: "Connect to DApps via WalletConnect/QR or share the address safely.",
+    description: "Connect to dApps, scan QR codes, or receive crypto without exposing your main wallet.",
     icon: step3Img,
     glassBg: "rgba(104, 99, 121, 0.14)",
     glassBorder: "rgba(104, 99, 121, 0.25)",
