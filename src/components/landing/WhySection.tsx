@@ -12,7 +12,7 @@ const reasons = [
   {
     icon: whyIcon1,
     title: "Try DApps Safely",
-    description: "Explore new projects without exposing your primary wallet.",
+    description: "Test new protocols and experimental apps without risking your primary wallet.",
     glassBg: "rgba(201, 190, 209, 0.08)",
     glassBorder: "rgba(171, 134, 170, 0.2)",
     hoverGlow: "rgba(201, 190, 209, 0.25)",
@@ -20,7 +20,7 @@ const reasons = [
   {
     icon: whyIcon2,
     title: "Low Commitment",
-    description: "No seed phrase setup. No password friction.",
+    description: "No seed phrases, passwords, or complicated onboarding.",
     glassBg: "rgba(160, 76, 150, 0.06)",
     glassBorder: "rgba(160, 76, 150, 0.18)",
     hoverGlow: "rgba(160, 76, 150, 0.2)",
@@ -28,7 +28,7 @@ const reasons = [
   {
     icon: whyIcon3,
     title: "Perfect for Explorers",
-    description: "Test chains, hunt airdrops, experiment freely.",
+    description: "Perfect for developers, testers, and airdrop hunters exploring new ecosystems.",
     glassBg: "rgba(104, 99, 121, 0.08)",
     glassBorder: "rgba(104, 99, 121, 0.2)",
     hoverGlow: "rgba(104, 99, 121, 0.22)",

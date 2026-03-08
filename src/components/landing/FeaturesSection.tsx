@@ -19,7 +19,7 @@ const features = [
   },
   {
     title: "Multi-Chain Support",
-    description: "Works across major EVM and non-EVM networks out of the box.",
+    description: "Interact across major multiple EVM and non-EVM blockchain networks seamlessly.",
     icon: featureIcon2,
     glassBg: "rgba(160, 76, 150, 0.12)",
     glassBorder: "rgba(160, 76, 150, 0.22)",
@@ -27,7 +27,7 @@ const features = [
   },
   {
     title: "Connect to DApps",
-    description: "Scan QR or use WalletConnect to interact with any decentralized app.",
+    description: "Connect via WalletConnect or QR code to interact with decentralized applications.",
     icon: featureIcon3,
     glassBg: "rgba(104, 99, 121, 0.14)",
     glassBorder: "rgba(104, 99, 121, 0.25)",
