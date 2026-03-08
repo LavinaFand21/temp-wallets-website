@@ -66,7 +66,7 @@ const DesktopPartnerCard = ({ partner }: { partner: Partner }) => {
         style={{
           backgroundImage: `url(${partner.logo})`,
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "center center",
+          backgroundPosition: partner.bgPosition ?? "center center",
           backgroundSize: partner.bgSize,
         }}
         aria-label={`${partner.name} logo`}
