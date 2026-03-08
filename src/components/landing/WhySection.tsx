@@ -36,7 +36,7 @@ const reasons = [
   {
     icon: whyIcon4,
     title: "Ideal for Payments",
-    description: "Receive funds without sharing your main address.",
+    description: "Receive crypto without exposing your permanent address.",
     glassBg: "rgba(65, 22, 58, 0.08)",
     glassBorder: "rgba(65, 22, 58, 0.25)",
     hoverGlow: "rgba(65, 22, 58, 0.25)",
