@@ -35,7 +35,7 @@ const features = [
   },
   {
     title: "Gasless Transactions",
-    description: "Execute transactions without worrying about gas setup or native tokens.",
+    description: "Execute the transactions without worrying about gas setup or native tokens.",
     icon: featureIcon4,
     glassBg: "rgba(65, 22, 58, 0.15)",
     glassBorder: "rgba(65, 22, 58, 0.3)",
