@@ -13,8 +13,8 @@ const partners = [
   { name: "Polkadot", logo: polkadotLogo, scale: 1 },
   { name: "Web3 Aligarh", logo: web3AligarhLogo, scale: 2.2 },
   { name: "India Blockchain Month", logo: inbmLogo, scale: 1 },
-  { name: "SheFi", logo: shefiLogo, scale: 3.2 },
-  { name: "Bitcoin India Conference", logo: bitcoinIndiaConferenceLogo, scale: 1.6 },
+  { name: "SheFi", logo: shefiLogo, scale: 4.5 },
+  { name: "Bitcoin India Conference", logo: bitcoinIndiaConferenceLogo, scale: 2.2 },
 ];
 
 const PartnerCard = ({ partner }: { partner: typeof partners[0] }) => (
@@ -22,8 +22,8 @@ const PartnerCard = ({ partner }: { partner: typeof partners[0] }) => (
     <img
       src={partner.logo}
       alt={`${partner.name} logo`}
-      className="max-h-8 max-w-full object-contain"
-      style={{ transform: `scale(${partner.scale})` }}
+      className="max-h-8 max-w-full object-contain mx-auto"
+      style={{ transform: `scale(${partner.scale})`, transformOrigin: "center center" }}
       loading="lazy"
     />
   </div>
@@ -83,8 +83,8 @@ const PartnersSection = () => {
               <img
                 src={partner.logo}
                 alt={`${partner.name} logo`}
-                className="max-h-10 max-w-full object-contain"
-                style={{ transform: `scale(${partner.scale})` }}
+                className="max-h-10 max-w-full object-contain mx-auto"
+                style={{ transform: `scale(${partner.scale})`, transformOrigin: "center center" }}
                 loading="lazy"
               />
             </div>
