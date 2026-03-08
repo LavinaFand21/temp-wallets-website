@@ -7,49 +7,86 @@ import yellowLogo from "@/assets/partner-yellow.png";
 import shefiLogo from "@/assets/partner-shefi.png";
 import bitcoinIndiaConferenceLogo from "@/assets/partner-bitcoin-india-conference.png";
 
-const partners = [
+type Partner = {
+  name: string;
+  logo: string;
+  scale: number;
+  translateX: number;
+  translateY: number;
+  bgSize?: string; // use background-image approach for precise centering
+};
+
+const partners: Partner[] = [
   { name: "Yellow Network", logo: yellowLogo, scale: 1, translateX: 0, translateY: 0 },
   { name: "Hack Tour India", logo: hacktourLogo, scale: 2.4, translateX: 0, translateY: 0 },
   { name: "Polkadot", logo: polkadotLogo, scale: 1, translateX: 0, translateY: 0 },
   { name: "Web3 Aligarh", logo: web3AligarhLogo, scale: 2.2, translateX: 0, translateY: 0 },
   { name: "India Blockchain Month", logo: inbmLogo, scale: 1, translateX: 0, translateY: 0 },
-  { name: "SheFi", logo: shefiLogo, scale: 4.5, translateX: 0, translateY: 0, transformOrigin: "75% 30%" },
-  { name: "Bitcoin India Conference", logo: bitcoinIndiaConferenceLogo, scale: 5, translateX: 0, translateY: 0, transformOrigin: "38% center" },
+  { name: "SheFi", logo: shefiLogo, scale: 1, translateX: 0, translateY: 0, bgSize: "180%" },
+  { name: "Bitcoin India Conference", logo: bitcoinIndiaConferenceLogo, scale: 1, translateX: 0, translateY: 0, bgSize: "200%" },
 ];
 
-type Partner = { name: string; logo: string; scale: number; translateX: number; translateY: number; transformOrigin?: string };
+const PartnerCard = ({ partner }: { partner: Partner }) => {
+  if (partner.bgSize) {
+    return (
+      <div
+        className="rounded-2xl border border-border/60 bg-card flex items-center justify-center hover:shadow-md transition-shadow cursor-default w-full h-[64px] overflow-hidden"
+        style={{
+          backgroundImage: `url(${partner.logo})`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center center",
+          backgroundSize: partner.bgSize,
+        }}
+        aria-label={`${partner.name} logo`}
+      />
+    );
+  }
+  return (
+    <div className="rounded-2xl border border-border/60 bg-card flex items-center justify-center py-4 px-5 hover:shadow-md transition-shadow cursor-default w-full h-[64px] overflow-hidden">
+      <img
+        src={partner.logo}
+        alt={`${partner.name} logo`}
+        className="max-h-8 w-full object-contain"
+        style={{
+          transform: `translate(${partner.translateX}%, ${partner.translateY}%) scale(${partner.scale})`,
+          transformOrigin: "center center",
+        }}
+        loading="lazy"
+      />
+    </div>
+  );
+};
 
-const PartnerCard = ({ partner }: { partner: Partner }) => (
-  <div className="rounded-2xl border border-border/60 bg-card flex items-center justify-center py-4 px-5 hover:shadow-md transition-shadow cursor-default w-full h-[64px] overflow-hidden">
-    <img
-      src={partner.logo}
-      alt={`${partner.name} logo`}
-      className="max-h-8 w-full object-contain"
-      style={{
-        transform: `translate(${partner.translateX}%, ${partner.translateY}%) scale(${partner.scale})`,
-        transformOrigin: partner.transformOrigin ?? "center center",
-        objectPosition: (partner as any).objectPosition ?? "center",
-      }}
-      loading="lazy"
-    />
-  </div>
-);
-
-const DesktopPartnerCard = ({ partner }: { partner: Partner }) => (
-  <div className="rounded-2xl border border-border/60 bg-card flex items-center justify-center py-5 px-7 hover:shadow-md transition-shadow cursor-default w-[148px] h-[80px] overflow-hidden">
-    <img
-      src={partner.logo}
-      alt={`${partner.name} logo`}
-      className="max-h-10 w-full object-contain"
-      style={{
-        transform: `translate(${partner.translateX}%, ${partner.translateY}%) scale(${partner.scale})`,
-        transformOrigin: partner.transformOrigin ?? "center center",
-        objectPosition: (partner as any).objectPosition ?? "center",
-      }}
-      loading="lazy"
-    />
-  </div>
-);
+const DesktopPartnerCard = ({ partner }: { partner: Partner }) => {
+  if (partner.bgSize) {
+    return (
+      <div
+        className="rounded-2xl border border-border/60 bg-card flex items-center justify-center hover:shadow-md transition-shadow cursor-default w-[148px] h-[80px] overflow-hidden"
+        style={{
+          backgroundImage: `url(${partner.logo})`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center center",
+          backgroundSize: partner.bgSize,
+        }}
+        aria-label={`${partner.name} logo`}
+      />
+    );
+  }
+  return (
+    <div className="rounded-2xl border border-border/60 bg-card flex items-center justify-center py-5 px-7 hover:shadow-md transition-shadow cursor-default w-[148px] h-[80px] overflow-hidden">
+      <img
+        src={partner.logo}
+        alt={`${partner.name} logo`}
+        className="max-h-10 w-full object-contain"
+        style={{
+          transform: `translate(${partner.translateX}%, ${partner.translateY}%) scale(${partner.scale})`,
+          transformOrigin: "center center",
+        }}
+        loading="lazy"
+      />
+    </div>
+  );
+};
 
 const PartnersSection = () => {
   return (
