@@ -11,7 +11,7 @@ const steps = [
   {
     step: "01",
     title: "Visit TempWallets",
-    description: "Open the web app on desktop or mobile — no downloads or extensions needed.",
+    description: "Visit the web app on desktop or mobile. No extensions or installations required.",
     icon: step1Img,
     glassBg: "rgba(201, 190, 209, 0.15)",
     glassBorder: "rgba(171, 134, 170, 0.25)",
