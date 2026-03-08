@@ -126,7 +126,7 @@ const FeaturesSection = () => {
         {/* Mobile: swipeable carousel with arrows */}
         <div className="block md:hidden">
           <Carousel opts={{ align: "start", loop: false, dragFree: true, watchDrag: true }} className="w-full select-none">
-            <CarouselContent className="-ml-3 touch-pan-y py-4 -my-4">
+            <CarouselContent className="-ml-3 touch-pan-y">
               {features.map((f, i) => (
                 <CarouselItem key={f.title} className="pl-3 basis-[85%]">
                   <FeatureCard f={f} i={i} />

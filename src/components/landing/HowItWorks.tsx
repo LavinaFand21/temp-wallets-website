@@ -106,7 +106,7 @@ const HowItWorks = () => {
         {/* Mobile: swipeable carousel with arrows */}
         <div className="block md:hidden">
           <Carousel opts={{ align: "start", loop: false, dragFree: true, watchDrag: true }} className="w-full select-none">
-            <CarouselContent className="-ml-3 touch-pan-y py-4 -my-4">
+            <CarouselContent className="-ml-3 touch-pan-y">
               {steps.map((step, i) => (
                 <CarouselItem key={step.step} className="pl-3 basis-[85%]">
                   <StepCard step={step} i={i} />
