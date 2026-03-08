@@ -20,7 +20,7 @@ const steps = [
   {
     step: "02",
     title: "Get an Instant Wallet",
-    description: "A temporary wallet is generated in seconds — zero setup required.",
+    description: "A disposable wallet is created instantly for secure and isolated interactions.",
     icon: step2Img,
     glassBg: "rgba(160, 76, 150, 0.12)",
     glassBorder: "rgba(160, 76, 150, 0.22)",
