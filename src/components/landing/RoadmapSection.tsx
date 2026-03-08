@@ -8,7 +8,7 @@ import roadmapLater from "@/assets/roadmap-later.png";
 const columns = [
   {
     label: "NOW",
-    sublabel: "In Progress",
+    sublabel: "Active Development",
     image: roadmapNow,
     items: ["Yellow integration", "Lightning Node Module", "Multi-chain expansion"],
     glassBg: "hsla(296, 30%, 82%, 0.12)",
