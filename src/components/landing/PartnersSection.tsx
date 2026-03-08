@@ -22,8 +22,8 @@ const PartnerCard = ({ partner }: { partner: typeof partners[0] }) => (
     <img
       src={partner.logo}
       alt={`${partner.name} logo`}
-      className="max-h-8 max-w-full object-contain"
-      style={{ transform: `scale(${partner.scale})` }}
+      className="max-h-8 max-w-full object-contain mx-auto"
+      style={{ transform: `scale(${partner.scale})`, transformOrigin: "center center" }}
       loading="lazy"
     />
   </div>
