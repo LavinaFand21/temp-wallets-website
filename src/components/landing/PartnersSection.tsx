@@ -22,8 +22,8 @@ const partners: Partner[] = [
   { name: "Polkadot", logo: polkadotLogo, scale: 1, translateX: 0, translateY: 0 },
   { name: "Web3 Aligarh", logo: web3AligarhLogo, scale: 2.2, translateX: 0, translateY: 0 },
   { name: "India Blockchain Month", logo: inbmLogo, scale: 1, translateX: 0, translateY: 0 },
-  { name: "SheFi", logo: shefiLogo, scale: 1, translateX: 0, translateY: 0, bgSize: "180%" },
-  { name: "Bitcoin India Conference", logo: bitcoinIndiaConferenceLogo, scale: 1, translateX: 0, translateY: 0, bgSize: "200%" },
+  { name: "SheFi", logo: shefiLogo, scale: 1, translateX: 0, translateY: 0, bgSize: "400%", bgPosition: "22% 32%" },
+  { name: "Bitcoin India Conference", logo: bitcoinIndiaConferenceLogo, scale: 1, translateX: 0, translateY: 0, bgSize: "220%", bgPosition: "42% 50%" },
 ];
 
 const PartnerCard = ({ partner }: { partner: Partner }) => {
