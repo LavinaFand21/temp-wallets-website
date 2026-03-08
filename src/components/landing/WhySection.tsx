@@ -12,7 +12,7 @@ const reasons = [
   {
     icon: whyIcon1,
     title: "Try DApps Safely",
-    description: "Explore new projects without exposing your primary wallet.",
+    description: "Test new protocols and experimental apps without risking your primary wallet.",
     glassBg: "rgba(201, 190, 209, 0.08)",
     glassBorder: "rgba(171, 134, 170, 0.2)",
     hoverGlow: "rgba(201, 190, 209, 0.25)",
