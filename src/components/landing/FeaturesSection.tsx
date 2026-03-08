@@ -73,7 +73,7 @@ const FeatureCard = ({ f, i }: { f: typeof features[0]; i: number }) => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-50px" }}
     transition={{ duration: 0.5, delay: i * 0.1 }}
-    className="group h-full"
+    className="group h-full p-2"
   >
     <CardContainer containerClassName="w-full h-full">
       <CardBody
