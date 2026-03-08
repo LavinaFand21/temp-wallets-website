@@ -64,7 +64,7 @@ const RoadmapCard = ({ col, index }: { col: (typeof columns)[0]; index: number }
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.7, delay: index * 0.15, ease: [0.25, 0.46, 0.45, 0.94] }}
       onMouseMove={handleMouseMove}
-      className="group relative rounded-3xl p-6 md:p-8 flex flex-col transition-all duration-500 hover:scale-[1.02] overflow-hidden h-full"
+      className="group relative rounded-3xl p-6 md:p-8 flex flex-col transition-all duration-500 hover:scale-[1.02] h-full"
       style={{
         background: col.glassBg,
         backdropFilter: "blur(24px)",
@@ -188,9 +188,9 @@ const RoadmapSection = () => {
         {/* Mobile: swipeable carousel with arrows */}
         <div className="block md:hidden">
           <Carousel opts={{ align: "start", loop: false, dragFree: true, watchDrag: true }} className="w-full select-none">
-            <CarouselContent className="-ml-3 touch-pan-y">
+            <CarouselContent className="-ml-3 touch-pan-y py-2">
               {columns.map((col, i) => (
-                <CarouselItem key={col.label} className="pl-3 basis-[85%]">
+                <CarouselItem key={col.label} className="pl-3 basis-[85%] py-1">
                   <RoadmapCard col={col} index={i} />
                 </CarouselItem>
               ))}
@@ -204,7 +204,7 @@ const RoadmapSection = () => {
         </div>
 
         {/* Desktop: grid */}
-        <div className="hidden md:grid grid-cols-3 gap-6 lg:gap-8">
+        <div className="hidden md:grid grid-cols-3 gap-6 lg:gap-8 py-2 px-1">
           {columns.map((col, i) => <RoadmapCard key={col.label} col={col} index={i} />)}
         </div>
       </div>

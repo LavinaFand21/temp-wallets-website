@@ -73,7 +73,7 @@ const FeatureCard = ({ f, i }: { f: typeof features[0]; i: number }) => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "-50px" }}
     transition={{ duration: 0.5, delay: i * 0.1 }}
-    className="group h-full"
+    className="group h-full p-2"
   >
     <CardContainer containerClassName="w-full h-full">
       <CardBody
@@ -126,7 +126,7 @@ const FeaturesSection = () => {
         {/* Mobile: swipeable carousel with arrows */}
         <div className="block md:hidden">
           <Carousel opts={{ align: "start", loop: false, dragFree: true, watchDrag: true }} className="w-full select-none">
-            <CarouselContent className="-ml-3 touch-pan-y">
+            <CarouselContent className="-ml-3 touch-pan-y py-2">
               {features.map((f, i) => (
                 <CarouselItem key={f.title} className="pl-3 basis-[85%]">
                   <FeatureCard f={f} i={i} />
@@ -146,7 +146,7 @@ const FeaturesSection = () => {
         </div>
 
         {/* Desktop: grid */}
-        <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-5 py-2 px-1">
           {features.map((f, i) => <FeatureCard key={f.title} f={f} i={i} />)}
         </div>
       </div>
