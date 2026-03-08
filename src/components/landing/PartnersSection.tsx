@@ -13,8 +13,8 @@ const partners = [
   { name: "Polkadot", logo: polkadotLogo, scale: 1 },
   { name: "Web3 Aligarh", logo: web3AligarhLogo, scale: 2.2 },
   { name: "India Blockchain Month", logo: inbmLogo, scale: 1 },
-  { name: "SheFi", logo: shefiLogo, scale: 2.0 },
-  { name: "Bitcoin India Conference", logo: bitcoinIndiaConferenceLogo, scale: 1.1 },
+  { name: "SheFi", logo: shefiLogo, scale: 3.2 },
+  { name: "Bitcoin India Conference", logo: bitcoinIndiaConferenceLogo, scale: 1.6 },
 ];
 
 const PartnerCard = ({ partner }: { partner: typeof partners[0] }) => (
