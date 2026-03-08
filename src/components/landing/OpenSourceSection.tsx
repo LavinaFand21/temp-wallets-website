@@ -24,20 +24,20 @@ const OpenSourceSection = () => {
           </h2>
           {/* Description always visible */}
           <p className="mt-5 max-w-2xl leading-relaxed text-base text-secondary-foreground">
-            TempWallets is developed transparently with community collaboration. 
-Developers and students are welcome to contribute and improve the ecosystem.
+            ​TempWallets is developed transparently with community collaboration.   
+Developers, students, and Web3 builders are welcome to contribute, experiment, and improve the ecosystem.
+          
+          
+          
           </p>
         </motion.div>
 
         {/* Main grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
           {/* Left: Stats + CTAs — desktop only for stats/heading/description */}
-          <motion.div
-            initial={{ opacity: 0, x: -24 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.55, delay: 0.1 }}
-            className="flex flex-col">
+          <motion.div initial={{ opacity: 0, x: -24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.55, delay: 0.1 }}
+          className="flex flex-col">
 
             {/* Repo identity */}
             <div className="flex items-center gap-3 mb-6">
