@@ -64,8 +64,8 @@ const HeroSection = () => {
               transition={{ duration: 0.7, delay: 0.3 }}
               className="mt-4 text-base sm:text-lg text-muted-foreground max-w-lg leading-relaxed mx-auto lg:mx-0">
 
-              Connect to DApps, test new apps, or receive crypto safely without
-              installing extensions or risking your main wallet.
+              ​Safely interact with new dApps, test protocols, or receive crypto without exposing your primary wallet.
+            
             </motion.p>
 
             <motion.div
