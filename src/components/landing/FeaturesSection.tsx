@@ -11,7 +11,7 @@ import featureIcon4 from "@/assets/feature-icon-4.png";
 const features = [
   {
     title: "Instant Temporary Wallets",
-    description: "Create disposable wallets instantly without installation or seed phrases.",
+    description: "Create the disposable wallets instantly without installation or seed phrases.",
     icon: featureIcon1,
     glassBg: "rgba(201, 190, 209, 0.15)",
     glassBorder: "rgba(171, 134, 170, 0.25)",
