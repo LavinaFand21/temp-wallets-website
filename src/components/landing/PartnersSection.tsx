@@ -14,7 +14,7 @@ const partners = [
   { name: "Web3 Aligarh", logo: web3AligarhLogo, scale: 2.2, translateX: 0, translateY: 0 },
   { name: "India Blockchain Month", logo: inbmLogo, scale: 1, translateX: 0, translateY: 0 },
   // SheFi logo content sits in top-left of its canvas; shift it right+down to center it
-  { name: "SheFi", logo: shefiLogo, scale: 4.5, translateX: 38, translateY: 30 },
+  { name: "SheFi", logo: shefiLogo, scale: 4.5, translateX: 62, translateY: 52 },
   { name: "Bitcoin India Conference", logo: bitcoinIndiaConferenceLogo, scale: 2.2, translateX: 0, translateY: 0 },
 ];
 
