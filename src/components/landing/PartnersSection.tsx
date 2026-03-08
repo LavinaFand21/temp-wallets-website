@@ -14,7 +14,7 @@ const partners = [
   { name: "Web3 Aligarh", logo: web3AligarhLogo, scale: 2.2, translateX: 0, translateY: 0 },
   { name: "India Blockchain Month", logo: inbmLogo, scale: 1, translateX: 0, translateY: 0 },
   { name: "SheFi", logo: shefiLogo, scale: 4.5, translateX: 62, translateY: 52 },
-  { name: "Bitcoin India Conference", logo: bitcoinIndiaConferenceLogo, scale: 5, translateX: 15, translateY: 0 },
+  { name: "Bitcoin India Conference", logo: bitcoinIndiaConferenceLogo, scale: 5, translateX: 0, translateY: 0 },
 ];
 
 type Partner = typeof partners[0];
