@@ -8,22 +8,26 @@ import shefiLogo from "@/assets/partner-shefi.png";
 import bitcoinIndiaConferenceLogo from "@/assets/partner-bitcoin-india-conference.png";
 
 const partners = [
-  { name: "Yellow Network", logo: yellowLogo, scale: 1 },
-  { name: "Hack Tour India", logo: hacktourLogo, scale: 2.4 },
-  { name: "Polkadot", logo: polkadotLogo, scale: 1 },
-  { name: "Web3 Aligarh", logo: web3AligarhLogo, scale: 2.2 },
-  { name: "India Blockchain Month", logo: inbmLogo, scale: 1 },
-  { name: "SheFi", logo: shefiLogo, scale: 4.5 },
-  { name: "Bitcoin India Conference", logo: bitcoinIndiaConferenceLogo, scale: 2.2 },
+  { name: "Yellow Network", logo: yellowLogo, scale: 1, translateX: 0, translateY: 0 },
+  { name: "Hack Tour India", logo: hacktourLogo, scale: 2.4, translateX: 0, translateY: 0 },
+  { name: "Polkadot", logo: polkadotLogo, scale: 1, translateX: 0, translateY: 0 },
+  { name: "Web3 Aligarh", logo: web3AligarhLogo, scale: 2.2, translateX: 0, translateY: 0 },
+  { name: "India Blockchain Month", logo: inbmLogo, scale: 1, translateX: 0, translateY: 0 },
+  // SheFi logo content sits in top-left of its canvas; shift it right+down to center it
+  { name: "SheFi", logo: shefiLogo, scale: 4.5, translateX: 38, translateY: 30 },
+  { name: "Bitcoin India Conference", logo: bitcoinIndiaConferenceLogo, scale: 2.2, translateX: 0, translateY: 0 },
 ];
 
 const PartnerCard = ({ partner }: { partner: typeof partners[0] }) => (
-  <div className="rounded-2xl border border-border/60 bg-card flex items-center justify-center py-4 px-5 hover:shadow-md transition-shadow cursor-default w-full h-[64px]">
+  <div className="rounded-2xl border border-border/60 bg-card flex items-center justify-center py-4 px-5 hover:shadow-md transition-shadow cursor-default w-full h-[64px] overflow-hidden">
     <img
       src={partner.logo}
       alt={`${partner.name} logo`}
-      className="max-h-8 max-w-full object-contain mx-auto"
-      style={{ transform: `scale(${partner.scale})`, transformOrigin: "center center" }}
+      className="max-h-8 max-w-full object-contain"
+      style={{
+        transform: `translate(${partner.translateX}%, ${partner.translateY}%) scale(${partner.scale})`,
+        transformOrigin: "center center",
+      }}
       loading="lazy"
     />
   </div>
@@ -78,13 +82,16 @@ const PartnersSection = () => {
           {partners.map((partner) => (
             <div
               key={partner.name}
-              className="rounded-2xl border border-border/60 bg-card flex items-center justify-center py-5 px-7 hover:shadow-md transition-shadow cursor-default w-[148px] h-[80px]"
+              className="rounded-2xl border border-border/60 bg-card flex items-center justify-center py-5 px-7 hover:shadow-md transition-shadow cursor-default w-[148px] h-[80px] overflow-hidden"
             >
               <img
                 src={partner.logo}
                 alt={`${partner.name} logo`}
-                className="max-h-10 max-w-full object-contain mx-auto"
-                style={{ transform: `scale(${partner.scale})`, transformOrigin: "center center" }}
+                className="max-h-10 max-w-full object-contain"
+                style={{
+                  transform: `translate(${partner.translateX}%, ${partner.translateY}%) scale(${partner.scale})`,
+                  transformOrigin: "center center",
+                }}
                 loading="lazy"
               />
             </div>
