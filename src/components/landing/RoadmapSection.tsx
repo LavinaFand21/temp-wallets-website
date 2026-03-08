@@ -188,7 +188,7 @@ const RoadmapSection = () => {
         {/* Mobile: swipeable carousel with arrows */}
         <div className="block md:hidden">
           <Carousel opts={{ align: "start", loop: false, dragFree: true, watchDrag: true }} className="w-full select-none">
-            <CarouselContent className="-ml-3 touch-pan-y">
+            <CarouselContent className="-ml-3 touch-pan-y py-4 -my-4">
               {columns.map((col, i) => (
                 <CarouselItem key={col.label} className="pl-3 basis-[85%]">
                   <RoadmapCard col={col} index={i} />
