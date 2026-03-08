@@ -8,14 +8,13 @@ import shefiLogo from "@/assets/partner-shefi.png";
 import bitcoinIndiaConferenceLogo from "@/assets/partner-bitcoin-india-conference.png";
 
 const partners = [
-  { name: "Yellow Network", logo: yellowLogo, scale: 1, translateX: 0, translateY: 0, bgPosition: "center" },
-  { name: "Hack Tour India", logo: hacktourLogo, scale: 2.4, translateX: 0, translateY: 0, bgPosition: "center" },
-  { name: "Polkadot", logo: polkadotLogo, scale: 1, translateX: 0, translateY: 0, bgPosition: "center" },
-  { name: "Web3 Aligarh", logo: web3AligarhLogo, scale: 2.2, translateX: 0, translateY: 0, bgPosition: "center" },
-  { name: "India Blockchain Month", logo: inbmLogo, scale: 1, translateX: 0, translateY: 0, bgPosition: "center" },
-  { name: "SheFi", logo: shefiLogo, scale: 4.5, translateX: 62, translateY: 52, bgPosition: "center" },
-  // Bitcoin India logo content sits left-of-center in its canvas; use bg approach for precise centering
-  { name: "Bitcoin India Conference", logo: bitcoinIndiaConferenceLogo, scale: 1, translateX: 0, translateY: 0, bgPosition: "38% center", useBg: true, bgSize: "280%" },
+  { name: "Yellow Network", logo: yellowLogo, scale: 1, translateX: 0, translateY: 0 },
+  { name: "Hack Tour India", logo: hacktourLogo, scale: 2.4, translateX: 0, translateY: 0 },
+  { name: "Polkadot", logo: polkadotLogo, scale: 1, translateX: 0, translateY: 0 },
+  { name: "Web3 Aligarh", logo: web3AligarhLogo, scale: 2.2, translateX: 0, translateY: 0 },
+  { name: "India Blockchain Month", logo: inbmLogo, scale: 1, translateX: 0, translateY: 0 },
+  { name: "SheFi", logo: shefiLogo, scale: 4.5, translateX: 62, translateY: 52 },
+  { name: "Bitcoin India Conference", logo: bitcoinIndiaConferenceLogo, scale: 1, translateX: 0, translateY: 0, objectPosition: "60% center" },
 ];
 
 type Partner = typeof partners[0];
