@@ -142,18 +142,6 @@ Developers and students are welcome to contribute and improve the ecosystem.
                 </div>
               </div>
 
-              {/* Mobile: view repo button below terminal */}
-              <div className="block md:hidden px-5 py-3 bg-neutral-900 border-t border-neutral-700">
-                <a
-                  href="https://github.com/tempwallets"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 w-full px-6 py-3 rounded-full border border-neutral-600 text-neutral-200 font-semibold text-sm hover:border-neutral-400 hover:text-white transition-all duration-300">
-                  View Repository
-                  <ArrowRight size={14} />
-                </a>
-              </div>
-
               {/* Repo stats footer bar */}
               <div className="flex items-center justify-between px-5 py-3 bg-neutral-900 border-t border-neutral-700">
                 <div className="flex items-center gap-4 text-xs text-neutral-400">
@@ -172,6 +160,17 @@ Developers and students are welcome to contribute and improve the ecosystem.
                 </div>
                 <span className="text-xs text-neutral-500">MIT License</span>
               </div>
+            </div>
+            {/* Mobile: view repo button below the terminal card */}
+            <div className="block md:hidden mt-4">
+              <a
+                href="https://github.com/tempwallets"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-full border-2 border-foreground/20 text-foreground font-semibold text-sm hover:border-foreground/40 hover:shadow-lg transition-all duration-300 backdrop-blur-sm">
+                View Repository
+                <ArrowRight size={14} />
+              </a>
             </div>
           </motion.div>
         </div>
