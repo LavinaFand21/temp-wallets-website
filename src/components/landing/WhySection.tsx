@@ -28,7 +28,7 @@ const reasons = [
   {
     icon: whyIcon3,
     title: "Perfect for Explorers",
-    description: "Test chains, hunt airdrops, experiment freely.",
+    description: "Perfect for developers, testers, and airdrop hunters exploring new ecosystems.",
     glassBg: "rgba(104, 99, 121, 0.08)",
     glassBorder: "rgba(104, 99, 121, 0.2)",
     hoverGlow: "rgba(104, 99, 121, 0.22)",

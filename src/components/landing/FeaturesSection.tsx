@@ -27,7 +27,7 @@ const features = [
   },
   {
     title: "Connect to DApps",
-    description: "Scan QR or use WalletConnect to interact with any decentralized app.",
+    description: "Connect via WalletConnect or QR code to interact with decentralized applications.",
     icon: featureIcon3,
     glassBg: "rgba(104, 99, 121, 0.14)",
     glassBorder: "rgba(104, 99, 121, 0.25)",
