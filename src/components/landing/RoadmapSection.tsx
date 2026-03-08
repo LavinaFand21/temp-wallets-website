@@ -34,7 +34,7 @@ const columns = [
   },
   {
     label: "LATER",
-    sublabel: "Planned",
+    sublabel: "On the Horizon",
     image: roadmapLater,
     items: ["Telegram Mini App", "Tip Gas Tank feature", "Analytics & dashboard upgrades"],
     glassBg: "hsla(302, 20%, 67%, 0.08)",
