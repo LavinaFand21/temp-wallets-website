@@ -4,13 +4,17 @@ import polkadotLogo from "@/assets/partner-polkadot.png";
 import web3AligarhLogo from "@/assets/partner-web3aligarh.png";
 import inbmLogo from "@/assets/partner-inbm.png";
 import yellowLogo from "@/assets/partner-yellow.png";
+import shefiLogo from "@/assets/partner-shefi.png";
+import bitcoinIndiaConferenceLogo from "@/assets/partner-bitcoin-india-conference.png";
 
 const partners = [
   { name: "Yellow Network", logo: yellowLogo, scale: 1 },
-  { name: "Hack Tour India", logo: hacktourLogo, scale: 1.9 },
+  { name: "Hack Tour India", logo: hacktourLogo, scale: 2.4 },
   { name: "Polkadot", logo: polkadotLogo, scale: 1 },
-  { name: "Web3 Aligarh", logo: web3AligarhLogo, scale: 1.7 },
+  { name: "Web3 Aligarh", logo: web3AligarhLogo, scale: 2.2 },
   { name: "India Blockchain Month", logo: inbmLogo, scale: 1 },
+  { name: "SheFi", logo: shefiLogo, scale: 2.0 },
+  { name: "Bitcoin India Conference", logo: bitcoinIndiaConferenceLogo, scale: 1.1 },
 ];
 
 const PartnerCard = ({ partner }: { partner: typeof partners[0] }) => (
@@ -41,7 +45,7 @@ const PartnersSection = () => {
           </h2>
         </motion.div>
 
-        {/* Mobile: 2-col grid with last item centered */}
+        {/* Mobile: 2-col grid with last item centered if odd */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -50,15 +54,17 @@ const PartnersSection = () => {
           className="block sm:hidden"
         >
           <div className="grid grid-cols-2 gap-2.5">
-            {partners.slice(0, 4).map((partner) => (
+            {partners.slice(0, partners.length % 2 === 0 ? partners.length : partners.length - 1).map((partner) => (
               <PartnerCard key={partner.name} partner={partner} />
             ))}
           </div>
-          <div className="mt-2.5 flex justify-center">
-            <div className="w-[calc(50%-5px)]">
-              <PartnerCard partner={partners[4]} />
+          {partners.length % 2 !== 0 && (
+            <div className="mt-2.5 flex justify-center">
+              <div className="w-[calc(50%-5px)]">
+                <PartnerCard partner={partners[partners.length - 1]} />
+              </div>
             </div>
-          </div>
+          )}
         </motion.div>
 
         {/* Desktop: flex wrap */}
