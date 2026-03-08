@@ -19,69 +19,37 @@ const partners = [
 
 type Partner = typeof partners[0];
 
-const PartnerCard = ({ partner }: { partner: Partner }) => {
-  if ((partner as any).useBg) {
-    return (
-      <div
-        className="rounded-2xl border border-border/60 bg-card flex items-center justify-center hover:shadow-md transition-shadow cursor-default w-full h-[64px]"
-        style={{
-          backgroundImage: `url(${partner.logo})`,
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: partner.bgPosition,
-          backgroundSize: (partner as any).bgSize ?? "contain",
-        }}
-        role="img"
-        aria-label={`${partner.name} logo`}
-      />
-    );
-  }
-  return (
-    <div className="rounded-2xl border border-border/60 bg-card flex items-center justify-center py-4 px-5 hover:shadow-md transition-shadow cursor-default w-full h-[64px] overflow-hidden">
-      <img
-        src={partner.logo}
-        alt={`${partner.name} logo`}
-        className="max-h-8 max-w-full object-contain"
-        style={{
-          transform: `translate(${partner.translateX}%, ${partner.translateY}%) scale(${partner.scale})`,
-          transformOrigin: "center center",
-        }}
-        loading="lazy"
-      />
-    </div>
-  );
-};
+const PartnerCard = ({ partner }: { partner: Partner }) => (
+  <div className="rounded-2xl border border-border/60 bg-card flex items-center justify-center py-4 px-5 hover:shadow-md transition-shadow cursor-default w-full h-[64px] overflow-hidden">
+    <img
+      src={partner.logo}
+      alt={`${partner.name} logo`}
+      className="max-h-8 w-full object-contain"
+      style={{
+        transform: `translate(${partner.translateX}%, ${partner.translateY}%) scale(${partner.scale})`,
+        transformOrigin: "center center",
+        objectPosition: (partner as any).objectPosition ?? "center",
+      }}
+      loading="lazy"
+    />
+  </div>
+);
 
-const DesktopPartnerCard = ({ partner }: { partner: Partner }) => {
-  if ((partner as any).useBg) {
-    return (
-      <div
-        className="rounded-2xl border border-border/60 bg-card hover:shadow-md transition-shadow cursor-default w-[148px] h-[80px]"
-        style={{
-          backgroundImage: `url(${partner.logo})`,
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: partner.bgPosition,
-          backgroundSize: (partner as any).bgSize ?? "contain",
-        }}
-        role="img"
-        aria-label={`${partner.name} logo`}
-      />
-    );
-  }
-  return (
-    <div className="rounded-2xl border border-border/60 bg-card flex items-center justify-center py-5 px-7 hover:shadow-md transition-shadow cursor-default w-[148px] h-[80px] overflow-hidden">
-      <img
-        src={partner.logo}
-        alt={`${partner.name} logo`}
-        className="max-h-10 max-w-full object-contain"
-        style={{
-          transform: `translate(${partner.translateX}%, ${partner.translateY}%) scale(${partner.scale})`,
-          transformOrigin: "center center",
-        }}
-        loading="lazy"
-      />
-    </div>
-  );
-};
+const DesktopPartnerCard = ({ partner }: { partner: Partner }) => (
+  <div className="rounded-2xl border border-border/60 bg-card flex items-center justify-center py-5 px-7 hover:shadow-md transition-shadow cursor-default w-[148px] h-[80px] overflow-hidden">
+    <img
+      src={partner.logo}
+      alt={`${partner.name} logo`}
+      className="max-h-10 w-full object-contain"
+      style={{
+        transform: `translate(${partner.translateX}%, ${partner.translateY}%) scale(${partner.scale})`,
+        transformOrigin: "center center",
+        objectPosition: (partner as any).objectPosition ?? "center",
+      }}
+      loading="lazy"
+    />
+  </div>
+);
 
 const PartnersSection = () => {
   return (
