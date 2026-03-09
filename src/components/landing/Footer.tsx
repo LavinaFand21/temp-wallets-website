@@ -3,16 +3,16 @@ import FooterSocialDock from "./FooterSocialDock";
 
 const productLinks = [
 { label: "Features", href: "#features" },
-{ label: "Roadmap", href: "#roadmap" },
+{ label: "Roadmap", href: "https://docs.google.com/document/d/160THb2gxNj8otyC1q-h-yzF7e1MB1WUT0DtO9Wr1t-8/edit?tab=t.0#heading=h.zcs9kc280bym" },
 { label: "Contribute", href: "#contribute" },
 { label: "Privacy Policy", href: "#" },
 { label: "Terms", href: "#" }];
 
 
 const resourceLinks = [
-{ label: "Pitch Deck", href: "#" },
-{ label: "Whitepaper", href: "#" },
-{ label: "Brand Assets", href: "#" }];
+{ label: "Pitch Deck", href: "https://bit.ly/pitchdeck-tempwallets" },
+{ label: "Whitepaper", href: "https://bit.ly/whitepaper-tempwallets" },
+{ label: "Brand Assets", href: "https://bit.ly/tempwallets-brandassets" }];
 
 
 const Footer = () => {
