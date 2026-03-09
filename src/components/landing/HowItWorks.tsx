@@ -117,10 +117,10 @@ const HowItWorks = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-8 sm:mb-16">
           
-          <h2 className="sm:text-[2.5rem] md:text-[3.5rem] font-bold text-foreground font-display leading-[1.05] tracking-tight text-4xl">
+          <h2 className="sm:text-[2.5rem] md:text-[3.5rem] font-bold text-foreground leading-[1.05] tracking-tight text-4xl font-sans">
             How It Works
           </h2>
-          <p className="mt-3 text-muted-foreground text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-3 text-base md:text-lg max-w-2xl mx-auto leading-relaxed text-secondary-foreground">
             Three simple steps to get your instant disposable wallet.
           </p>
         </motion.div>

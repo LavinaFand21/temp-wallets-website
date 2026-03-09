@@ -114,10 +114,10 @@ const WhySection = () => {
           transition={{ duration: 0.5 }}
           className="mb-8 sm:mb-14 text-center">
           
-          <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] font-bold text-foreground font-display leading-[1.05] tracking-tight">
+          <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] font-bold text-foreground leading-[1.05] tracking-tight font-sans">
             Why TempWallets?
           </h2>
-          <p className="mt-3 text-muted-foreground text-base md:text-lg max-w-2xl leading-relaxed mx-auto">
+          <p className="mt-3 text-base md:text-lg max-w-2xl leading-relaxed mx-auto text-secondary-foreground">
             Built for real use. Designed to be simple.
           </p>
         </motion.div>

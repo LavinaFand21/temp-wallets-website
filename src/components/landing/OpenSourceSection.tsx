@@ -19,7 +19,7 @@ const OpenSourceSection = () => {
 
           <h2
             id="opensource-heading"
-            className="font-display text-[2.25rem] sm:text-[3rem] font-bold text-black leading-[1.08] tracking-[-0.02em] lg:text-6xl">
+            className="text-[2.25rem] sm:text-[3rem] font-bold text-black leading-[1.08] tracking-[-0.02em] lg:text-6xl font-sans">
             Built in the Open
           </h2>
           {/* Description always visible */}
