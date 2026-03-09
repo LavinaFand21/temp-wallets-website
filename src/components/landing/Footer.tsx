@@ -35,7 +35,7 @@ const Footer = () => {
               Built by TempWallets
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Instant, disposable wallets for Web3 exploration. No setup, no risk – explore freely.
+              Instant, disposable wallets for Web3 exploration. No setup, no risk. Just explore freely.
             </p>
           </div>
 
