@@ -60,18 +60,18 @@ Developers, students, and Web3 builders are welcome to contribute, experiment, a
             </div>
 
             {/* Open source line — desktop only */}
-            <p className="hidden md:block text-sm text-neutral-500 leading-relaxed mb-10 max-w-sm">
-              TempWallets is fully open source under the MIT License — free to use, fork, and build upon by anyone.
+            <p className="hidden md:block leading-relaxed mb-10 max-w-sm text-secondary-foreground text-base">
+              TempWallets is now open source and happy to built collaboratively with developers and the Web3 community.
+            
             </p>
 
             {/* CTA — desktop only */}
             <div className="hidden md:flex flex-col sm:flex-row gap-4">
-              <a
-                href="https://github.com/tempwallets"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View TempWallets repository on GitHub"
-                className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full border-2 border-foreground/20 text-foreground font-semibold text-base hover:border-foreground/40 hover:shadow-lg hover:scale-[1.02] transition-all duration-300 backdrop-blur-sm">
+              <a href="https://github.com/tempwallets"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View TempWallets repository on GitHub"
+              className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full border-2 border-foreground/20 text-foreground font-semibold text-base hover:border-foreground/40 hover:shadow-lg hover:scale-[1.02] transition-all duration-300 backdrop-blur-sm">
                 View Repository
                 <ArrowRight size={16} />
               </a>
