@@ -31,7 +31,7 @@ const PartnerCard = ({ partner }: {partner: Partner;}) => {
   if (partner.bgSize) {
     return (
       <div
-        className="rounded-2xl border border-border/60 bg-card flex items-center justify-center hover:shadow-md transition-shadow cursor-default w-full h-[64px] overflow-hidden"
+        className="rounded-2xl border border-border/60 bg-card flex items-center justify-center transition-shadow cursor-default w-full h-[64px] overflow-hidden shadow-none"
         style={{
           backgroundImage: `url(${partner.logo})`,
           backgroundRepeat: "no-repeat",
