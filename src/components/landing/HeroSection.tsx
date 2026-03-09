@@ -76,7 +76,9 @@ const HeroSection = () => {
 
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
                 <a
-                  href="#how-it-works"
+                  href="https://www.tempwallets.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-foreground text-background font-semibold text-sm sm:text-base hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
                   Get Started
                   <ArrowRight size={16} />
