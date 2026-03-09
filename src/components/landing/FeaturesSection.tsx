@@ -91,13 +91,13 @@ const FeatureCard = ({ f, i }: {f: typeof features[0];i: number;}) =>
       style={{ background: `radial-gradient(ellipse at 50% 0%, ${f.hoverGlow}, transparent 70%)` }} />
       
         <CardItem translateZ={20} className="w-full relative z-10">
-          <h3 className="font-display text-lg md:text-xl font-bold text-foreground leading-tight text-center">{f.title}</h3>
+          <h3 className="font-display md:text-xl font-bold text-foreground leading-tight text-center text-xl">{f.title}</h3>
         </CardItem>
         <CardItem translateZ={40} className="w-full relative z-10">
           <AnimatedIcon src={f.icon} alt={f.title} />
         </CardItem>
         <CardItem translateZ={15} className="w-full relative z-10">
-          <p className="text-sm leading-relaxed text-center font-medium text-secondary-foreground">{f.description}</p>
+          <p className="leading-relaxed text-center font-medium text-secondary-foreground text-base">{f.description}</p>
         </CardItem>
       </CardBody>
     </CardContainer>
@@ -116,7 +116,7 @@ const FeaturesSection = () => {
           className="mb-8 sm:mb-14 text-center">
           
           <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] font-bold text-foreground leading-[1.05] tracking-tight font-sans">
-            TempWallets
+            Features
           </h2>
           <p className="mt-3 text-base md:text-lg max-w-2xl leading-relaxed mx-auto text-secondary-foreground">
             Everything you need. Nothing you don't.
