@@ -35,7 +35,8 @@ const Footer = () => {
               Built by TempWallets
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Instant, disposable wallets for Web3 exploration. No setup, no risk – explore freely.
+              Instant, disposable wallets for Web3 exploration. 
+No setup, no risk. Just explore freely.
             </p>
           </div>
 
@@ -43,11 +44,10 @@ const Footer = () => {
           <div className="flex-1 flex flex-col items-start lg:items-end gap-4">
             {/* Row 1: Outline button links */}
             <nav className="flex flex-wrap gap-1.5" aria-label="Product links">
-              {productLinks.map((l) =>
-              <a
-                key={l.label}
-                href={l.href}
-                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border-2 border-foreground/20 text-foreground font-semibold text-sm hover:border-foreground/40 hover:shadow-lg hover:scale-[1.02] transition-all duration-300 backdrop-blur-sm">
+              {productLinks.map((l) => <a
+                  key={l.label}
+                  href={l.href}
+                  className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border-2 border-foreground/20 text-foreground font-semibold text-sm hover:border-foreground/40 hover:shadow-lg hover:scale-[1.02] transition-all duration-300 backdrop-blur-sm">
                   {l.label}
                 </a>
               )}
