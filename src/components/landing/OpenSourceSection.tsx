@@ -152,7 +152,7 @@ Developers, students, and Web3 builders are welcome to contribute, experiment, a
             {/* Mobile: view repo button below the terminal card */}
             <div className="block md:hidden mt-4">
               <a
-                href="https://github.com/tempwallets"
+                href="https://github.com/MXmaster2s/Tempwallets.com.git"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 w-full px-6 py-3.5 rounded-full border-2 border-foreground/20 text-foreground font-semibold text-sm hover:border-foreground/40 hover:shadow-lg transition-all duration-300 backdrop-blur-sm">
