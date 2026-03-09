@@ -77,7 +77,7 @@ const FeatureCard = ({ f, i }: {f: typeof features[0];i: number;}) =>
   
     <CardContainer containerClassName="w-full h-full">
       <CardBody
-      className="relative w-full rounded-3xl p-6 md:p-8 flex flex-col items-center text-center justify-between transition-all duration-500 ease-out group-hover:scale-[1.03] h-full min-h-[280px] md:min-h-[330px]"
+      className="relative w-full rounded-3xl p-6 md:p-8 flex flex-col items-center text-center justify-between transition-all duration-500 ease-out group-hover:scale-[1.03] h-full min-h-[280px] md:h-[360px]"
       style={{
         background: f.glassBg,
         backdropFilter: "blur(24px)",
