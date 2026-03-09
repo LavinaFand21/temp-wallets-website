@@ -60,8 +60,8 @@ const AnimatedIcon = ({ src, alt }: {src: string;alt: string;}) => {
   }, [isInView, controls]);
 
   return (
-    <motion.div ref={ref} animate={controls} className="flex items-center justify-center py-[25px]">
-      <img src={src} alt={alt} className="w-20 h-20 object-contain drop-shadow-lg" loading="lazy" />
+    <motion.div ref={ref} animate={controls} className="flex items-center justify-center py-[25px] md:py-[32px]">
+      <img src={src} alt={alt} className="w-20 h-20 md:w-24 md:h-24 object-contain drop-shadow-lg" loading="lazy" />
     </motion.div>);
 
 };
