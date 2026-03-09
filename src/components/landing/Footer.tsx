@@ -20,7 +20,7 @@ const Footer = () => {
     <footer className="border-t border-border/20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-6">
         {/* Row 1: Full-width logo */}
-        <div className="mb-3 lg:mb-2">
+        <div className="mb-5 lg:mb-2">
           <img
             src={logo}
             alt="TempWallets logo"
@@ -28,10 +28,10 @@ const Footer = () => {
         </div>
 
         {/* Row 2: Left desc + Right links */}
-        <div className="flex flex-col lg:flex-row gap-5 lg:gap-8 mb-4 lg:mb-3 lg:items-center">
+        <div className="flex flex-col lg:flex-row gap-5 lg:gap-8 mb-6 lg:mb-3 lg:items-center">
           {/* Left: Brand + Description */}
           <div className="lg:max-w-sm flex-shrink-0">
-            <h3 className="font-bold text-foreground text-lg tracking-tight mb-1 font-sans">
+            <h3 className="font-bold text-foreground text-lg tracking-tight mb-2 lg:mb-1 font-sans">
               Built by TempWallets
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
@@ -40,7 +40,7 @@ const Footer = () => {
           </div>
 
           {/* Right: Links */}
-          <div className="flex-1 flex flex-col items-start lg:items-end gap-2 lg:gap-2">
+          <div className="flex-1 flex flex-col items-start lg:items-end gap-4 lg:gap-2">
             {/* Row 1: Outline button links */}
             <nav className="flex flex-wrap gap-2" aria-label="Product links">
               {productLinks.map((l) =>
@@ -68,12 +68,12 @@ const Footer = () => {
         </div>
 
         {/* Social Dock */}
-        <div className="mb-2 lg:mb-1">
+        <div className="mb-4 lg:mb-1">
           <FooterSocialDock />
         </div>
 
         {/* Bottom copyright */}
-        <div className="pt-2 lg:pt-2 border-t border-border/40 text-center">
+        <div className="pt-3 lg:pt-2 border-t border-border/40 text-center">
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} TempWallets. All rights reserved.
           </p>
