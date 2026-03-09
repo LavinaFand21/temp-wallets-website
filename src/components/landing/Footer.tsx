@@ -47,7 +47,7 @@ const Footer = () => {
               <a
                 key={l.label}
                 href={l.href}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border-2 border-foreground/20 text-foreground font-semibold text-sm hover:border-foreground/40 hover:shadow-lg hover:scale-[1.02] transition-all duration-300 backdrop-blur-sm">
+                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border-2 border-foreground/20 text-foreground font-semibold text-sm hover:border-foreground/40 hover:shadow-lg hover:scale-[1.02] transition-all duration-300 backdrop-blur-sm">
                   {l.label}
                 </a>
               )}
