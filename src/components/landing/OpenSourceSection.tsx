@@ -59,22 +59,10 @@ Developers, students, and Web3 builders are welcome to contribute, experiment, a
               </div>
             </div>
 
-            {/* Stats row — desktop only */}
-            <div className="hidden md:flex flex-wrap gap-5 mb-10">
-              {[
-              { icon: Star, label: "Stars", value: "1.2k" },
-              { icon: GitFork, label: "Forks", value: "300" },
-              { icon: Users, label: "Contributors", value: "45" }].
-              map(({ icon: Icon, label, value }) =>
-              <div
-                key={label}
-                className="flex items-center gap-2 px-4 py-2.5 rounded-full border border-neutral-200 bg-neutral-50">
-                  <Icon size={14} className="text-black" />
-                  <span className="text-sm font-semibold text-black">{value}</span>
-                  <span className="text-sm text-neutral-500">{label}</span>
-                </div>
-              )}
-            </div>
+            {/* Open source line — desktop only */}
+            <p className="hidden md:block text-sm text-neutral-500 leading-relaxed mb-10 max-w-sm">
+              TempWallets is fully open source under the MIT License — free to use, fork, and build upon by anyone.
+            </p>
 
             {/* CTA — desktop only */}
             <div className="hidden md:flex flex-col sm:flex-row gap-4">
