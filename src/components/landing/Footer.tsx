@@ -18,9 +18,9 @@ const resourceLinks = [
 const Footer = () => {
   return (
     <footer className="border-t border-border/20 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5 lg:py-6">
         {/* Row 1: Full-width logo */}
-        <div className="mb-5">
+        <div className="mb-3">
           <img
             src={logo}
             alt="TempWallets logo"
@@ -28,7 +28,7 @@ const Footer = () => {
         </div>
 
         {/* Row 2: Left desc + Right links */}
-        <div className="flex flex-col lg:flex-row gap-5 lg:gap-12 mb-6">
+        <div className="flex flex-col lg:flex-row gap-3 lg:gap-10 mb-4">
           {/* Left: Brand + Description */}
           <div className="lg:max-w-sm flex-shrink-0">
             <h3 className="font-bold text-foreground text-lg tracking-tight mb-2 font-sans">
