@@ -42,7 +42,7 @@ const Footer = () => {
           {/* Right: Links */}
           <div className="flex-1 flex flex-col items-start lg:items-end gap-4">
             {/* Row 1: Outline button links */}
-            <nav className="flex flex-wrap gap-2" aria-label="Product links">
+            <nav className="flex flex-wrap gap-1.5" aria-label="Product links">
               {productLinks.map((l) =>
               <a
                 key={l.label}
