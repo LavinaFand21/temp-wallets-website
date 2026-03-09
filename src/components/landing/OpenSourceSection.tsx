@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, ArrowRight, Star, GitFork, Users } from "lucide-react";
+import { Github, ArrowRight, Star, GitFork } from "lucide-react";
 
 const OpenSourceSection = () => {
   return (
