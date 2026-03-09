@@ -55,7 +55,7 @@ export const CardContainer = ({
           onMouseEnter={handleMouseEnter}
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
-          className={cn("flex items-center justify-center relative transition-all duration-200 ease-linear text-secondary-foreground",
+          className={cn("flex items-center justify-center relative transition-all duration-200 ease-linear text-secondary-foreground py-0",
 
           className
           )}

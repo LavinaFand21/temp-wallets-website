@@ -60,7 +60,7 @@ const AnimatedIcon = ({ src, alt }: {src: string;alt: string;}) => {
   }, [isInView, controls]);
 
   return (
-    <motion.div ref={ref} animate={controls} className="flex items-center justify-center py-[26px] md:py-[32px]">
+    <motion.div ref={ref} animate={controls} className="flex items-center justify-center md:py-[32px] py-[30px]">
       <img src={src} alt={alt} className="w-20 h-20 md:w-24 md:h-24 object-contain drop-shadow-lg" loading="lazy" />
     </motion.div>);
 
@@ -83,7 +83,7 @@ const FeatureCard = ({ f, i }: {f: typeof features[0];i: number;}) =>
         backdropFilter: "blur(24px)",
         WebkitBackdropFilter: "blur(24px)",
         border: `1px solid ${f.glassBorder}`,
-        boxShadow: "0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.6)",
+        boxShadow: "0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.6)"
       } as React.CSSProperties}>
       
         <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
