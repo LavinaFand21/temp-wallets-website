@@ -67,7 +67,7 @@ Developers, students, and Web3 builders are welcome to contribute, experiment, a
 
             {/* CTA — desktop only */}
             <div className="hidden md:flex flex-col sm:flex-row gap-4">
-              <a href="https://github.com/tempwallets"
+              <a href="https://github.com/MXmaster2s/Tempwallets.com.git"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="View TempWallets repository on GitHub"
