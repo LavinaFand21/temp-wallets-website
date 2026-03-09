@@ -41,11 +41,11 @@ Developers, students, and Web3 builders are welcome to contribute, experiment, a
 
             {/* Repo identity */}
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-black flex items-center justify-center flex-shrink-0">
-                <Github size={20} className="text-primary-foreground bg-secondary-foreground" />
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 bg-white border-2 border-black shadow-xl">
+                <Github size={20} className="text-black bg-white" />
               </div>
               <div>
-                <p className="text-xs text-neutral-500 font-medium uppercase tracking-widest mb-0.5">
+                <p className="text-xs font-medium uppercase tracking-widest mb-0.5 text-secondary-foreground">
                   Open Source
                 </p>
                 <a
