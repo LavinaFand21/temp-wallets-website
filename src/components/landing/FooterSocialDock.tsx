@@ -31,7 +31,7 @@ const links = [
   {
     title: "GitHub",
     icon: <IconBrandGithub className="h-full w-full text-muted-foreground" />,
-    href: "https://github.com/tempwallets",
+    href: "https://github.com/MXmaster2s/Tempwallets.com.git",
   },
 ];
 
