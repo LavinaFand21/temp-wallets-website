@@ -111,7 +111,7 @@ const PartnersSection = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.15 }}
-          className="block sm:hidden py-[25px] shadow-xl">
+          className="block sm:hidden shadow-xl py-0">
           
           <div className="grid grid-cols-2 gap-2.5">
             {partners.slice(0, partners.length % 2 === 0 ? partners.length : partners.length - 1).map((partner) =>
