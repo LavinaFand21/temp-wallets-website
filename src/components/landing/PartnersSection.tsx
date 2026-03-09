@@ -133,7 +133,7 @@ const PartnersSection = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.15 }}
-          className="hidden sm:flex flex-wrap justify-center items-center gap-4">
+          className="hidden sm:flex flex-wrap justify-center items-center gap-4 rounded-sm">
           
           {partners.map((partner) =>
           <DesktopPartnerCard key={partner.name} partner={partner} />
