@@ -20,7 +20,7 @@ const reasons = [
 {
   icon: whyIcon2,
   title: "Low Commitment",
-  description: "No long seed phrases, passwords, or complicated onboarding.",
+  description: "No long seed phrases, complex passwords, or complicated onboarding.",
   glassBg: "rgba(160, 76, 150, 0.06)",
   glassBorder: "rgba(160, 76, 150, 0.18)",
   hoverGlow: "rgba(160, 76, 150, 0.2)"
