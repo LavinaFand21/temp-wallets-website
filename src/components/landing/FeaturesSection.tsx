@@ -9,41 +9,41 @@ import featureIcon3 from "@/assets/feature-icon-3.png";
 import featureIcon4 from "@/assets/feature-icon-4.png";
 
 const features = [
-  {
-    title: "Instant Temporary Wallets",
-    description: "Create the disposable wallets instantly without installation or seed phrases.",
-    icon: featureIcon1,
-    glassBg: "rgba(201, 190, 209, 0.15)",
-    glassBorder: "rgba(171, 134, 170, 0.25)",
-    hoverGlow: "rgba(201, 190, 209, 0.25)",
-  },
-  {
-    title: "Multi-Chain Support",
-    description: "Interact across multiple EVM and non-EVM blockchain networks seamlessly.",
-    icon: featureIcon2,
-    glassBg: "rgba(160, 76, 150, 0.12)",
-    glassBorder: "rgba(160, 76, 150, 0.22)",
-    hoverGlow: "rgba(160, 76, 150, 0.2)",
-  },
-  {
-    title: "Connect to DApps",
-    description: "Connect via WalletConnect or QR code to interact with decentralized applications.",
-    icon: featureIcon3,
-    glassBg: "rgba(104, 99, 121, 0.14)",
-    glassBorder: "rgba(104, 99, 121, 0.25)",
-    hoverGlow: "rgba(104, 99, 121, 0.22)",
-  },
-  {
-    title: "Gasless Transactions",
-    description: "Execute the transactions without worrying about gas setup or native tokens.",
-    icon: featureIcon4,
-    glassBg: "rgba(65, 22, 58, 0.15)",
-    glassBorder: "rgba(65, 22, 58, 0.3)",
-    hoverGlow: "rgba(65, 22, 58, 0.25)",
-  },
-];
+{
+  title: "Instant Temporary Wallets",
+  description: "Create the disposable wallets instantly without installation or seed phrases.",
+  icon: featureIcon1,
+  glassBg: "rgba(201, 190, 209, 0.15)",
+  glassBorder: "rgba(171, 134, 170, 0.25)",
+  hoverGlow: "rgba(201, 190, 209, 0.25)"
+},
+{
+  title: "Multi-Chain Support",
+  description: "Interact across multiple EVM and non-EVM blockchain networks seamlessly.",
+  icon: featureIcon2,
+  glassBg: "rgba(160, 76, 150, 0.12)",
+  glassBorder: "rgba(160, 76, 150, 0.22)",
+  hoverGlow: "rgba(160, 76, 150, 0.2)"
+},
+{
+  title: "Connect to DApps",
+  description: "Connect via WalletConnect or QR code to interact with decentralized applications.",
+  icon: featureIcon3,
+  glassBg: "rgba(104, 99, 121, 0.14)",
+  glassBorder: "rgba(104, 99, 121, 0.25)",
+  hoverGlow: "rgba(104, 99, 121, 0.22)"
+},
+{
+  title: "Gasless Transactions",
+  description: "Execute the transactions without worrying about gas setup or native tokens.",
+  icon: featureIcon4,
+  glassBg: "rgba(65, 22, 58, 0.15)",
+  glassBorder: "rgba(65, 22, 58, 0.3)",
+  hoverGlow: "rgba(65, 22, 58, 0.25)"
+}];
 
-const AnimatedIcon = ({ src, alt }: { src: string; alt: string }) => {
+
+const AnimatedIcon = ({ src, alt }: {src: string;alt: string;}) => {
   const controls = useAnimation();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
@@ -54,7 +54,7 @@ const AnimatedIcon = ({ src, alt }: { src: string; alt: string }) => {
         y: [0, -12, 0],
         rotate: [0, 6, -6, 0],
         scale: [1, 1.1, 1],
-        transition: { duration: 2, ease: "easeInOut" },
+        transition: { duration: 2, ease: "easeInOut" }
       });
     }
   }, [isInView, controls]);
@@ -62,34 +62,34 @@ const AnimatedIcon = ({ src, alt }: { src: string; alt: string }) => {
   return (
     <motion.div ref={ref} animate={controls} className="flex items-center justify-center py-4">
       <img src={src} alt={alt} className="w-20 h-20 object-contain drop-shadow-lg" loading="lazy" />
-    </motion.div>
-  );
+    </motion.div>);
+
 };
 
-const FeatureCard = ({ f, i }: { f: typeof features[0]; i: number }) => (
-  <motion.div
-    key={f.title}
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "-50px" }}
-    transition={{ duration: 0.5, delay: i * 0.1 }}
-    className="group h-full p-2"
-  >
+const FeatureCard = ({ f, i }: {f: typeof features[0];i: number;}) =>
+<motion.div
+  key={f.title}
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, margin: "-50px" }}
+  transition={{ duration: 0.5, delay: i * 0.1 }}
+  className="group h-full p-2">
+  
     <CardContainer containerClassName="w-full h-full">
       <CardBody
-        className="relative w-full rounded-3xl p-6 flex flex-col items-center text-center justify-between transition-all duration-500 ease-out group-hover:scale-[1.03] h-full"
-        style={{
-          background: f.glassBg,
-          backdropFilter: "blur(24px)",
-          WebkitBackdropFilter: "blur(24px)",
-          border: `1px solid ${f.glassBorder}`,
-          boxShadow: "0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.6)",
-          minHeight: 280,
-        } as React.CSSProperties}
-      >
+      className="relative w-full rounded-3xl p-6 flex flex-col items-center text-center justify-between transition-all duration-500 ease-out group-hover:scale-[1.03] h-full"
+      style={{
+        background: f.glassBg,
+        backdropFilter: "blur(24px)",
+        WebkitBackdropFilter: "blur(24px)",
+        border: `1px solid ${f.glassBorder}`,
+        boxShadow: "0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.6)",
+        minHeight: 280
+      } as React.CSSProperties}>
+      
         <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-          style={{ background: `radial-gradient(ellipse at 50% 0%, ${f.hoverGlow}, transparent 70%)` }}
-        />
+      style={{ background: `radial-gradient(ellipse at 50% 0%, ${f.hoverGlow}, transparent 70%)` }} />
+      
         <CardItem translateZ={20} className="w-full relative z-10">
           <h3 className="font-display text-lg md:text-xl font-bold text-foreground leading-tight text-center">{f.title}</h3>
         </CardItem>
@@ -97,12 +97,12 @@ const FeatureCard = ({ f, i }: { f: typeof features[0]; i: number }) => (
           <AnimatedIcon src={f.icon} alt={f.title} />
         </CardItem>
         <CardItem translateZ={15} className="w-full relative z-10">
-          <p className="text-foreground/80 text-sm leading-relaxed text-center">{f.description}</p>
+          <p className="text-sm leading-relaxed text-center font-medium text-secondary-foreground">{f.description}</p>
         </CardItem>
       </CardBody>
     </CardContainer>
-  </motion.div>
-);
+  </motion.div>;
+
 
 const FeaturesSection = () => {
   return (
@@ -113,8 +113,8 @@ const FeaturesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="mb-8 sm:mb-14 text-center"
-        >
+          className="mb-8 sm:mb-14 text-center">
+          
           <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] font-bold text-foreground font-display leading-[1.05] tracking-tight">
             TempWallets
           </h2>
@@ -127,11 +127,11 @@ const FeaturesSection = () => {
         <div className="block md:hidden">
           <Carousel opts={{ align: "start", loop: false, dragFree: true, watchDrag: true }} className="w-full select-none">
             <CarouselContent className="-ml-3 touch-pan-y py-2">
-              {features.map((f, i) => (
-                <CarouselItem key={f.title} className="pl-3 basis-[85%]">
+              {features.map((f, i) =>
+              <CarouselItem key={f.title} className="pl-3 basis-[85%]">
                   <FeatureCard f={f} i={i} />
                 </CarouselItem>
-              ))}
+              )}
             </CarouselContent>
             <div className="flex items-center justify-center gap-3 mt-4">
               <CarouselPrevious className="relative static translate-y-0 left-auto top-auto w-9 h-9 rounded-full border border-border/60 bg-background/80 shadow-sm hover:bg-background">
@@ -150,8 +150,8 @@ const FeaturesSection = () => {
           {features.map((f, i) => <FeatureCard key={f.title} f={f} i={i} />)}
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default FeaturesSection;
