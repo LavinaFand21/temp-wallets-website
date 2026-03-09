@@ -60,7 +60,7 @@ const AnimatedIcon = ({ src, alt }: {src: string;alt: string;}) => {
   }, [isInView, controls]);
 
   return (
-    <motion.div ref={ref} animate={controls} className="flex items-center justify-center py-4">
+    <motion.div ref={ref} animate={controls} className="flex items-center justify-center py-[25px]">
       <img src={src} alt={alt} className="w-20 h-20 object-contain drop-shadow-lg" loading="lazy" />
     </motion.div>);
 
@@ -90,13 +90,13 @@ const WhyCard = ({ r, i }: {r: typeof reasons[0];i: number;}) =>
       style={{ background: `radial-gradient(ellipse at 50% 0%, ${r.hoverGlow}, transparent 70%)` }} />
       
         <CardItem translateZ={20} className="w-full relative z-10">
-          <h3 className="font-display text-lg md:text-xl font-bold text-foreground leading-tight text-center">{r.title}</h3>
+          <h3 className="font-display md:text-xl font-bold text-foreground leading-tight text-center text-xl">{r.title}</h3>
         </CardItem>
         <CardItem translateZ={40} className="w-full relative z-10">
           <AnimatedIcon src={r.icon} alt={r.title} />
         </CardItem>
         <CardItem translateZ={15} className="w-full relative z-10">
-          <p className="text-sm leading-relaxed text-center text-secondary-foreground font-medium">{r.description}</p>
+          <p className="leading-relaxed text-center text-secondary-foreground font-medium text-base">{r.description}</p>
         </CardItem>
       </CardBody>
     </CardContainer>
