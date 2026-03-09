@@ -20,7 +20,7 @@ const Footer = () => {
     <footer className="border-t border-border/20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-6">
         {/* Row 1: Full-width logo */}
-        <div className="mb-5">
+        <div className="mb-3 lg:mb-3">
           <img
             src={logo}
             alt="TempWallets logo"
