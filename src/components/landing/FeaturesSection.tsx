@@ -60,7 +60,7 @@ const AnimatedIcon = ({ src, alt }: {src: string;alt: string;}) => {
   }, [isInView, controls]);
 
   return (
-    <motion.div ref={ref} animate={controls} className="flex items-center justify-center py-4">
+    <motion.div ref={ref} animate={controls} className="flex items-center justify-center py-[26px]">
       <img src={src} alt={alt} className="w-20 h-20 object-contain drop-shadow-lg" loading="lazy" />
     </motion.div>);
 
@@ -115,7 +115,7 @@ const FeaturesSection = () => {
           transition={{ duration: 0.5 }}
           className="mb-8 sm:mb-14 text-center">
           
-          <h2 className="text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] font-bold text-foreground leading-[1.05] tracking-tight font-sans">
+          <h2 className="sm:text-[2.5rem] md:text-[3.5rem] font-bold text-foreground leading-[1.05] tracking-tight font-sans text-4xl">
             Features
           </h2>
           <p className="mt-3 text-base md:text-lg max-w-2xl leading-relaxed mx-auto text-secondary-foreground">
