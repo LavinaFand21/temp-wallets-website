@@ -20,7 +20,7 @@ const reasons = [
 {
   icon: whyIcon2,
   title: "Low Commitment",
-  description: "No long seed phrases, passwords, or complicated onboarding.",
+  description: "No long seed phrases, complex passwords, or complicated onboarding.",
   glassBg: "rgba(160, 76, 150, 0.06)",
   glassBorder: "rgba(160, 76, 150, 0.18)",
   hoverGlow: "rgba(160, 76, 150, 0.2)"
@@ -36,7 +36,7 @@ const reasons = [
 {
   icon: whyIcon4,
   title: "Ideal for Payments",
-  description: "Send or Receive crypto without exposing your permanent address.",
+  description: "Just send or Receive crypto without exposing your permanent address.",
   glassBg: "rgba(65, 22, 58, 0.08)",
   glassBorder: "rgba(65, 22, 58, 0.25)",
   hoverGlow: "rgba(65, 22, 58, 0.25)"
