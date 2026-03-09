@@ -76,14 +76,13 @@ const WhyCard = ({ r, i }: {r: typeof reasons[0];i: number;}) =>
   
     <CardContainer containerClassName="w-full h-full">
       <CardBody
-      className="relative w-full rounded-3xl p-6 flex flex-col items-center text-center justify-between transition-all duration-500 ease-out group-hover:scale-[1.03] h-full"
+      className="relative w-full rounded-3xl p-6 md:p-8 flex flex-col items-center text-center justify-between transition-all duration-500 ease-out group-hover:scale-[1.03] h-full min-h-[280px] md:min-h-[330px]"
       style={{
         background: r.glassBg,
         backdropFilter: "blur(24px)",
         WebkitBackdropFilter: "blur(24px)",
         border: `1px solid ${r.glassBorder}`,
         boxShadow: "0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.08), inset 0 1px 0 rgba(255,255,255,0.6)",
-        minHeight: 280
       } as React.CSSProperties}>
       
         <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
