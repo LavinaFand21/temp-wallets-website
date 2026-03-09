@@ -3,7 +3,7 @@ import FooterSocialDock from "./FooterSocialDock";
 
 const productLinks = [
 { label: "Features", href: "#features" },
-{ label: "Roadmap", href: "#roadmap" },
+{ label: "Roadmap", href: "https://docs.google.com/document/d/160THb2gxNj8otyC1q-h-yzF7e1MB1WUT0DtO9Wr1t-8/edit?tab=t.0#heading=h.zcs9kc280bym" },
 { label: "Contribute", href: "#contribute" },
 { label: "Privacy Policy", href: "#" },
 { label: "Terms", href: "#" }];
