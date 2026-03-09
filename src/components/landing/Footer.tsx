@@ -68,7 +68,7 @@ const Footer = () => {
         </div>
 
         {/* Social Dock */}
-        <div className="mb-4">
+        <div className="mb-2 lg:mb-2">
           <FooterSocialDock />
         </div>
 
