@@ -103,7 +103,7 @@ const RoadmapCard = ({ col, index }: {col: (typeof columns)[0];index: number;}) 
       
 
       {/* Icon */}
-      <div className="relative z-10 mb-4 flex justify-center">
+      <div className="relative z-10 mb-4 flex justify-center py-[20px]">
         <motion.img
           src={col.image}
           alt={`${col.label} roadmap icon`}
