@@ -91,8 +91,8 @@ const DesktopPartnerCard = ({ partner }: {partner: Partner;}) => {
 
 const PartnersSection = () => {
   return (
-    <section id="partners" className="section-padding bg-secondary/20 section-divider">
-      <div className="max-w-5xl mx-auto w-full">
+    <section id="partners" className="section-padding bg-secondary/20 section-divider shadow-none">
+      <div className="max-w-5xl mx-auto w-full shadow-none">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -113,13 +113,13 @@ const PartnersSection = () => {
           transition={{ duration: 0.5, delay: 0.15 }}
           className="block sm:hidden shadow-xl py-0">
           
-          <div className="grid grid-cols-2 gap-2.5">
+          <div className="grid grid-cols-2 gap-2.5 shadow-none">
             {partners.slice(0, partners.length % 2 === 0 ? partners.length : partners.length - 1).map((partner) =>
             <PartnerCard key={partner.name} partner={partner} />
             )}
           </div>
           {partners.length % 2 !== 0 &&
-          <div className="mt-2.5 flex justify-center">
+          <div className="mt-2.5 flex justify-center shadow-none">
               <div className="w-[calc(50%-5px)]">
                 <PartnerCard partner={partners[partners.length - 1]} />
               </div>
