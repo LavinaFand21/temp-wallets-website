@@ -98,7 +98,7 @@ const StepCard = ({ step, i }: {step: typeof steps[0];i: number;}) =>
             <IconWithAnimation src={step.icon} alt={step.title} />
           </CardItem>
           <CardItem translateZ={15} className="w-full relative z-10">
-            <p className="text-foreground/80 text-sm leading-relaxed text-center font-semibold">{step.description}</p>
+            <p className="text-foreground/80 leading-relaxed text-center font-medium text-base">{step.description}</p>
           </CardItem>
         </CardBody>
       </CardContainer>
