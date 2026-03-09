@@ -49,7 +49,7 @@ Developers, students, and Web3 builders are welcome to contribute, experiment, a
                   Open Source
                 </p>
                 <a
-                  href="https://github.com/tempwallets"
+                  href="https://github.com/MXmaster2s/Tempwallets.com.git"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="TempWallets GitHub repository"

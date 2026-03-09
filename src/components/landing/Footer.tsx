@@ -10,9 +10,9 @@ const productLinks = [
 
 
 const resourceLinks = [
-{ label: "Pitch Deck", href: "#" },
-{ label: "Whitepaper", href: "#" },
-{ label: "Brand Assets", href: "#" }];
+{ label: "Pitch Deck", href: "https://bit.ly/pitchdeck-tempwallets" },
+{ label: "Whitepaper", href: "https://bit.ly/whitepaper-tempwallets" },
+{ label: "Brand Assets", href: "https://bit.ly/tempwallets-brandassets" }];
 
 
 const Footer = () => {
