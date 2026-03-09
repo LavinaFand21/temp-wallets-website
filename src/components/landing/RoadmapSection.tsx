@@ -134,12 +134,12 @@ const RoadmapCard = ({ col, index }: {col: (typeof columns)[0];index: number;}) 
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }} />
           
           {col.label}
-          <span className="text-[0.6rem] font-medium tracking-wider opacity-60 normal-case">· {col.sublabel}</span>
+          <span className="text-[0.6rem] tracking-wider opacity-60 normal-case font-semibold">· {col.sublabel}</span>
         </motion.div>
       </div>
 
       {/* Items */}
-      <ul className="space-y-3 relative z-10 flex-1">
+      <ul className="space-y-3 relative z-10 flex-1 text-secondary-foreground">
         {col.items.map((item, i) =>
         <motion.li
           key={item}
@@ -150,7 +150,7 @@ const RoadmapCard = ({ col, index }: {col: (typeof columns)[0];index: number;}) 
           className="flex items-start gap-3 text-base text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
           
             <span className="mt-1.5 w-2 h-2 rounded-full flex-shrink-0" style={{ backgroundColor: col.accentDot }} />
-            <span>{item}</span>
+            <span className="font-medium text-secondary-foreground">{item}</span>
           </motion.li>
         )}
       </ul>
