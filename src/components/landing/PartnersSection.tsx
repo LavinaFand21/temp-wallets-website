@@ -26,7 +26,7 @@ const partners: Partner[] = [
 { name: "India Blockchain Month", logo: inbmLogo, scale: 1, translateX: 0, translateY: 0 },
 { name: "SheFi", logo: shefiLogo, scale: 1, translateX: 0, translateY: 0, bgSize: "170%", bgPosition: "18% 32%" },
 { name: "Bitcoin India Conference", logo: bitcoinIndiaConferenceLogo, scale: 1, translateX: 0, translateY: 0, bgSize: "130%", bgPosition: "45% 40%" },
-{ name: "Upskill Africa", logo: upskillAfricaLogo, scale: 8.0, translateX: 0, translateY: 0 }];
+{ name: "Upskill Africa", logo: upskillAfricaLogo, scale: 9.0, translateX: 0, translateY: 0 }];
 
 
 const PartnerCard = ({ partner }: {partner: Partner;}) => {
