@@ -6,6 +6,7 @@ import inbmLogo from "@/assets/partner-inbm.png";
 import yellowLogo from "@/assets/partner-yellow.png";
 import shefiLogo from "@/assets/partner-shefi.png";
 import bitcoinIndiaConferenceLogo from "@/assets/partner-bitcoin-india-conference.png";
+import upskillAfricaLogo from "@/assets/partner-upskill-africa.png";
 
 type Partner = {
   name: string;

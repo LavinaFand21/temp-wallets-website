@@ -111,7 +111,7 @@ const HeroSection = () => {
               </span>
               <span className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                No Seed Phrase
+                No Extensions
               </span>
             </motion.div>
           </div>
