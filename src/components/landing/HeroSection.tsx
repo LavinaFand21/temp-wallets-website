@@ -84,11 +84,11 @@ const HeroSection = () => {
                   <ArrowRight size={16} />
                 </a>
                 <a
-                  href="https://app.tempwallets.com"
+                  href="https://github.com/tempwallets"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full border-2 border-foreground/20 text-foreground font-semibold text-sm sm:text-base hover:border-foreground/40 hover:shadow-lg hover:scale-[1.02] transition-all duration-300 backdrop-blur-sm">
-                  Launch Wallet
+                  Contribute on GitHub
                   <ArrowRight size={16} />
                 </a>
               </div>
