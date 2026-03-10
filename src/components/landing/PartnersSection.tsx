@@ -6,6 +6,7 @@ import inbmLogo from "@/assets/partner-inbm.png";
 import yellowLogo from "@/assets/partner-yellow.png";
 import shefiLogo from "@/assets/partner-shefi.png";
 import bitcoinIndiaConferenceLogo from "@/assets/partner-bitcoin-india-conference.png";
+import upskillAfricaLogo from "@/assets/partner-upskill-africa.png";
 
 type Partner = {
   name: string;
@@ -24,19 +25,21 @@ const partners: Partner[] = [
 { name: "Web3 Aligarh", logo: web3AligarhLogo, scale: 2.2, translateX: 0, translateY: 0 },
 { name: "India Blockchain Month", logo: inbmLogo, scale: 1, translateX: 0, translateY: 0 },
 { name: "SheFi", logo: shefiLogo, scale: 1, translateX: 0, translateY: 0, bgSize: "170%", bgPosition: "18% 32%" },
-{ name: "Bitcoin India Conference", logo: bitcoinIndiaConferenceLogo, scale: 1, translateX: 0, translateY: 0, bgSize: "130%", bgPosition: "45% 40%" }];
+{ name: "Bitcoin India Conference", logo: bitcoinIndiaConferenceLogo, scale: 1, translateX: 0, translateY: 0, bgSize: "130%", bgPosition: "45% 40%" },
+{ name: "Upskill Africa", logo: upskillAfricaLogo, scale: 1.1, translateX: 0, translateY: 0 }];
 
 
 const PartnerCard = ({ partner }: {partner: Partner;}) => {
   if (partner.bgSize) {
     return (
       <div
-        className="rounded-2xl border border-border/60 bg-card flex items-center justify-center transition-shadow cursor-default w-full h-[64px] overflow-hidden shadow-none"
+        className="rounded-2xl border border-border/60 bg-card flex items-center justify-center transition-shadow cursor-default w-full h-[64px] overflow-hidden shadow-none [box-shadow:none]"
         style={{
           backgroundImage: `url(${partner.logo})`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: partner.bgPosition ?? "center center",
-          backgroundSize: partner.bgSize
+          backgroundSize: partner.bgSize,
+          boxShadow: "none"
         }}
         aria-label={`${partner.name} logo`} />);
 
