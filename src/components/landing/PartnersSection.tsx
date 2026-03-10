@@ -33,12 +33,13 @@ const PartnerCard = ({ partner }: {partner: Partner;}) => {
   if (partner.bgSize) {
     return (
       <div
-        className="rounded-2xl border border-border/60 bg-card flex items-center justify-center transition-shadow cursor-default w-full h-[64px] overflow-hidden shadow-none"
+        className="rounded-2xl border border-border/60 bg-card flex items-center justify-center transition-shadow cursor-default w-full h-[64px] overflow-hidden shadow-none [box-shadow:none]"
         style={{
           backgroundImage: `url(${partner.logo})`,
           backgroundRepeat: "no-repeat",
           backgroundPosition: partner.bgPosition ?? "center center",
-          backgroundSize: partner.bgSize
+          backgroundSize: partner.bgSize,
+          boxShadow: "none"
         }}
         aria-label={`${partner.name} logo`} />);
 
