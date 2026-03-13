@@ -187,7 +187,7 @@ const TeamSection = () => {
             
             <CarouselContent className="-ml-3 touch-pan-y py-2">
               {members.map((member, i) =>
-              <CarouselItem key={member.name} className="pl-3 basis-[75%]">
+              <CarouselItem key={member.name} className="pl-3 basis-[85%]">
                   <TeamCard member={member} index={i} />
                 </CarouselItem>
               )}
