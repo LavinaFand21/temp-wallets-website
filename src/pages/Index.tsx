@@ -4,6 +4,7 @@ import HowItWorks from "@/components/landing/HowItWorks";
 import FeaturesSection from "@/components/landing/FeaturesSection";
 import WhySection from "@/components/landing/WhySection";
 import OpenSourceSection from "@/components/landing/OpenSourceSection";
+import TeamSection from "@/components/landing/TeamSection";
 import SocialProof from "@/components/landing/SocialProof";
 import PartnersSection from "@/components/landing/PartnersSection";
 import RoadmapSection from "@/components/landing/RoadmapSection";
@@ -19,6 +20,7 @@ const Index = () => {
       <FeaturesSection />
       <WhySection />
       <OpenSourceSection />
+      <TeamSection />
       <SocialProof />
       <PartnersSection />
       <RoadmapSection />
