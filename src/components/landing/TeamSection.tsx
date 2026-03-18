@@ -21,7 +21,7 @@ const members = [
 {
   name: "Rohit",
   role: "Founder",
-  photo: null as string | null,
+  photo: rohitPhoto as string | null,
   telegram: "https://t.me/rohit",
   twitter: "https://x.com/rohit",
   placeholderBg: "linear-gradient(160deg, #6b2c78 0%, #a04c96 60%, #c9a0c8 100%)"
@@ -29,7 +29,7 @@ const members = [
 {
   name: "Karsh",
   role: "Founding Developer",
-  photo: null as string | null,
+  photo: karshPhoto as string | null,
   telegram: "https://t.me/karsh",
   twitter: "https://x.com/karsh",
   placeholderBg: "linear-gradient(160deg, #4a3060 0%, #8b6aa0 60%, #c9bed1 100%)"
@@ -37,7 +37,7 @@ const members = [
 {
   name: "Lavina",
   role: "PR & Communications",
-  photo: null as string | null,
+  photo: lavinaPhoto as string | null,
   telegram: "https://t.me/lavina",
   twitter: "https://x.com/lavina",
   placeholderBg: "linear-gradient(160deg, #41163a 0%, #7a3870 60%, #ab86aa 100%)"
