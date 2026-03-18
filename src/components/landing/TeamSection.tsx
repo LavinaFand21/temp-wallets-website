@@ -32,20 +32,20 @@ const members = [
   placeholderBg: "linear-gradient(160deg, #4a3060 0%, #8b6aa0 60%, #c9bed1 100%)"
 },
 {
-  name: "Rahul",
-  role: "Business Development",
-  photo: null as string | null,
-  telegram: "https://t.me/rahul",
-  twitter: "https://x.com/rahul",
-  placeholderBg: "linear-gradient(160deg, #3a2850 0%, #686379 60%, #9a90aa 100%)"
-},
-{
   name: "Lavina",
   role: "PR & Communications",
   photo: null as string | null,
   telegram: "https://t.me/lavina",
   twitter: "https://x.com/lavina",
   placeholderBg: "linear-gradient(160deg, #41163a 0%, #7a3870 60%, #ab86aa 100%)"
+},
+{
+  name: "Chinmey",
+  role: "Developer",
+  photo: null as string | null,
+  telegram: "https://t.me/chinmey",
+  twitter: "https://x.com/chinmey",
+  placeholderBg: "linear-gradient(160deg, #1e3a5f 0%, #2d6a9f 60%, #7ab3d4 100%)"
 }];
 
 
