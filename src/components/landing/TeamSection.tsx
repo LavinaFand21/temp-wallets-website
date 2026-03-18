@@ -79,7 +79,7 @@ const TeamCard = ({ member, index }: {member: typeof members[0];index: number;})
   viewport={{ once: true, margin: "-50px" }}
   transition={{ duration: 0.5, delay: index * 0.1 }}
   className="group w-full"
-  style={{ aspectRatio: "3/4" }}>
+  style={{ aspectRatio: "4/5" }}>
   
     {/* Card: full photo fill, overlaid elements */}
     <div
