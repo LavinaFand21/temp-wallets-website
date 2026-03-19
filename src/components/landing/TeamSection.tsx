@@ -94,7 +94,7 @@ const TeamCard = ({ member, index }: {member: typeof members[0];index: number;})
     <img
       src={member.photo}
       alt={member.name}
-      className="absolute inset-0 w-full h-full object-cover object-top scale-125"
+      className="absolute inset-0 w-full h-full object-contain object-center"
       loading="lazy" /> :
 
 
