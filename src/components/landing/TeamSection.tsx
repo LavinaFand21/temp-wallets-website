@@ -4,6 +4,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import rohitPhoto from "@/assets/team-rohit.png";
 import karshPhoto from "@/assets/team-karsh.png";
 import lavinaPhoto from "@/assets/team-lavina.png";
+import chinmayiPhoto from "@/assets/team-chinmayi.png";
 
 const TelegramIcon = () =>
 <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
