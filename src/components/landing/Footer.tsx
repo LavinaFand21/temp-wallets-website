@@ -5,8 +5,8 @@ const productLinks = [
 { label: "Features", href: "#features" },
 { label: "Roadmap", href: "https://docs.google.com/document/d/160THb2gxNj8otyC1q-h-yzF7e1MB1WUT0DtO9Wr1t-8/edit?tab=t.0#heading=h.zcs9kc280bym" },
 { label: "Contribute", href: "#contribute" },
-{ label: "Privacy Policy", href: "#" },
-{ label: "Terms", href: "#" }];
+{ label: "Privacy Policy", href: "https://docs.google.com/document/d/1g0luu43P4HW234WkRiY777rgfqViHErai6cFBcjBuoU/edit?usp=sharing" },
+{ label: "Terms", href: "https://docs.google.com/document/d/18CO91fo-ii7bXrDJ2yoQHcdgir10npcfxYg0d7P6Cng/edit?usp=sharing" }];
 
 
 const resourceLinks = [

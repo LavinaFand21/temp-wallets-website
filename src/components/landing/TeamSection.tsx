@@ -44,11 +44,11 @@ const members = [
   placeholderBg: "linear-gradient(160deg, #41163a 0%, #7a3870 60%, #ab86aa 100%)"
 },
 {
-  name: "Chinmey",
+  name: "Chinmayi",
   role: "Developer",
-  photo: null as string | null,
-  telegram: "https://t.me/chinmey",
-  twitter: "https://x.com/chinmey",
+  photo: chinmayiPhoto as string | null,
+  telegram: "https://t.me/ChinmayiDS_221ME213",
+  twitter: "https://x.com/ChinmayiDS",
   placeholderBg: "linear-gradient(160deg, #1e3a5f 0%, #2d6a9f 60%, #7ab3d4 100%)"
 }];
 
