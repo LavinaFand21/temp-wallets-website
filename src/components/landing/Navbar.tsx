@@ -28,7 +28,7 @@ const NavbarSection = () => {
       <NavBody>
         <NavbarLogo src={logo} alt="TempWallets logo" label="TempWallets" />
         <NavItems items={navItems} />
-        <div className="flex items-center gap-3">
+        <div className="relative z-[70] flex items-center gap-3">
           <NavbarButton
             as="button"
             onClick={handleLaunchClick}
