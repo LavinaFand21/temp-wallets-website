@@ -8,18 +8,12 @@ import {
 "@/components/ui/resizable-navbar";
 import logo from "@/assets/logo.png";
 import mobileIcon from "@/assets/icon-mobile.png";
-import { toast } from "sonner";
 
 const navItems = [
 { name: "Features", link: "#features" },
 { name: "Roadmap", link: "#roadmap" },
 { name: "Partners", link: "#partners" },
 { name: "Contribute", link: "#contribute" }];
-
-const handleLaunchClick = (e: React.MouseEvent) => {
-  e.preventDefault();
-  toast("Coming Soon!", { description: "The app is under development. Stay tuned!" });
-};
 
 const NavbarSection = () => {
   return (
@@ -30,8 +24,10 @@ const NavbarSection = () => {
         <NavItems items={navItems} />
         <div className="relative z-[70] flex items-center gap-3">
           <NavbarButton
-            as="button"
-            onClick={handleLaunchClick}
+            as="a"
+            href="https://www.tempwallets.com/"
+            target="_blank"
+            rel="noopener noreferrer"
             variant="gradient">
             Launch App
           </NavbarButton>
@@ -55,8 +51,10 @@ const NavbarSection = () => {
             )}
           </nav>
           <NavbarButton
-            as="button"
-            onClick={handleLaunchClick}
+            as="a"
+            href="https://www.tempwallets.com/"
+            target="_blank"
+            rel="noopener noreferrer"
             variant="gradient"
             className="text-[9px] px-2.5 py-1.5 flex-shrink-0 leading-tight">
             Launch

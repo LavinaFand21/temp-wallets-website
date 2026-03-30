@@ -1,11 +1,5 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { toast } from "sonner";
-
-const handleLaunchClick = (e: React.MouseEvent) => {
-  e.preventDefault();
-  toast("Coming Soon!", { description: "The app is under development. Stay tuned!" });
-};
 
 const FinalCTA = () => {
   return (
@@ -32,13 +26,15 @@ const FinalCTA = () => {
           No wallet setup required.
         </p>
         <div className="mt-8">
-          <button
-            onClick={handleLaunchClick}
+          <a
+            href="https://www.tempwallets.com/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-white text-[#41163a] font-semibold text-base hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
           >
             Launch TempWallet
             <ArrowRight size={18} />
-          </button>
+          </a>
         </div>
       </motion.div>
     </section>
